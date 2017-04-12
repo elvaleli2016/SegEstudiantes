@@ -37,7 +37,7 @@ body::before {
   font-size: 20px;
   font-weight: 400;
 }
-.form input {
+.form input,select {
   outline: none;
   display: block;
   width: 100%;

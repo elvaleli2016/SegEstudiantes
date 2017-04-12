@@ -37,8 +37,15 @@
                     <input name="_token" type="hidden" value="{{ csrf_token() }}">
                     <input placeholder="Usuario" v-model="usuario" name="usuario" type="text" value="admin" required>
                 </label>
-            	<label>
+            	 <label>
                     <input placeholder="Contraseña" v-model="contrasena" name="contrasena" type="password" value="12345" required>
+                </label>
+                <label>
+                  <select name="tipo_cuenta" class="selectpicker">
+                      <option value="administrador">Administrador</option>
+                      <option value="docente">Docente</option>
+                  </select>
+
                 </label>
                 <input type="submit" value="Entrar">
             </form>
