@@ -18,9 +18,9 @@ class SesionController extends Controller
     public function validar(Request $request){
       $user=null;
       if($request['tipo_cuenta']=="administrador"){
-        $docente=Administrador::where('usuario',$request['usuario'])->where('contrasena',$request['contrasena']);
-        if($docente->count()!=0){
-          $user=$docente->first();
+        $admin=Administrador::where('usuario',$request['usuario'])->where('contrasena',$request['contrasena']);
+        if($admin->count()!=0){
+          $user=$admin->first();
         }else{
         return redirect("/")->with("status","Usuario o contraseña incorrectos");
         }
@@ -40,7 +40,8 @@ class SesionController extends Controller
       $user['nombre']=$usuario->nombre;
       $user['identificacion']=$usuario->identificacion;
       $user['telefono']=$usuario->telefono;
-      Session::put('users',$user->toArray());
-      dd($request->all());
+      $user['tipo']=$request['tipo_cuenta'];
+      Session::put('usuario',$user->toArray());
+      return view("app");
     }
 }
