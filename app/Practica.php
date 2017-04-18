@@ -4,19 +4,19 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Usuario extends Model
+class Practica extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'usuarios';
+    protected $table = 'practicas';
  
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['id', 'nombre', 'tipo_identificacion', 'identificacion', 'telefono', 'correo', 'direccion'];
+    protected $fillable = ['id'];
 }
