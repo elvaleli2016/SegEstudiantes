@@ -19,7 +19,7 @@ class SesionController extends Controller
     public function validar(Request $request){
       $user=null;
       if($request['tipo_cuenta']=="administrador"){
-        $admin=Administrador::where('usuario',$request['usuario'])->where('contrasena',$request['contrasena']);
+        $admin=Administrador::where('usuario',$request['usuario'])->where('password',$request['contrasena']);
         if($admin->count()!=0){
           $user=$admin->first();
         }else{
@@ -27,7 +27,7 @@ class SesionController extends Controller
         }
 
       }else if($request['tipo_cuenta']=="docente"){
-          $docente=Docente::where('usuario',$request['usuario'])->where('contrasena',$request['contrasena']);
+          $docente=Docente::where('usuario',$request['usuario'])->where('password',$request['contrasena']);
           if($docente->count()!=0){
             $user=$docente->first();
           }else{
