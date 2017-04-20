@@ -24,10 +24,7 @@
             },
         }
     });
-    $("#form-empresa").submit(function(){
-      console.log('cgjgh');
-      return false;
-    });
+  
 
 </script>
 @endsection

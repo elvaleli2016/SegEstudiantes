@@ -12,11 +12,9 @@
           <div id="registrar_empresa">
               <section class="content-header">
                   <div class="row">
-                      <div class="col-md-4 col-sm-4" id="contenido-cabecera">
 
-                      </div>
 
-                      <div class="col-md-offset-3 col-md-5 col-sm-4" id="msj">
+                      <div class="col-xs-12" id="msj">
                           @if (isset($msj))
                           <div class="alert alert-success alert-dismissible" role="alert" style="margin-bottom : -5px;margin-top : -5px;z-index:2;">
                               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -29,7 +27,7 @@
               </section>
               <section style="padding : 10px 25px 25px 25px;">
                   <div class="col-md-12">
-                      <form role="form" id="form-empresa" action="#" method="POST" id="form"  enctype="multipart/form-data">
+                      <form role="form" id="form-empresa" action="agregar-empresa" method="POST" enctype="multipart/form-data">
                           <div class="box box-danger">
                               <input name="_token" type="hidden" value="{{ csrf_token() }}">
                               <div class="box-body">

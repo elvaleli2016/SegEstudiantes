@@ -11,41 +11,41 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon -->
-    <link href="rsc/img/favicon.ico" rel="Shortcut icon">
+    <link href="/rsc/img/favicon.ico" rel="Shortcut icon">
     <!-- Web Fonts -->
     <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="css/ie8.min.css">
-    <link type="text/css" rel="stylesheet" href="css/blocks.min.css">
-    <link type="text/css" rel="stylesheet" href="css/plugins.min.css">
-    <link type="text/css" rel="stylesheet" href="css/style.min.css">
-    <link type="text/css" rel="stylesheet" href="css/app.min.css">
-    <link type="text/css" rel="stylesheet" href="css/shop.plugins.min.css">
-    <link type="text/css" rel="stylesheet" href="css/shop.blocks.min.css">
-    <link type="text/css" rel="stylesheet" href="css/style-switcher.min.css">
-    <link type="text/css" rel="stylesheet" href="css/shop.style.min.css">
-    <link type="text/css" rel="stylesheet" href="css/header-v6.min.css">
-    <link type="text/css" rel="stylesheet" href="css/header-v8.min.css">
-    <link type="text/css" rel="stylesheet" href="css/header.min.css">
-    <link type="text/css" rel="stylesheet" href="css/footer-v1.min.css">
-    <link type="text/css" rel="stylesheet" href="css/animate.min.css">
-    <link type="text/css" rel="stylesheet" href="css/line-icons.min.css">
-    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" href="css/owl.carousel.min.css">
-    <link type="text/css" rel="stylesheet" href="css/horizontal-parallax.min.css">
-    <link type="text/css" rel="stylesheet" href="css/layerslider.min.css">
-    <link type="text/css" rel="stylesheet" href="css/ured.min.css">
-    <link type="text/css" rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-    <link type="text/css" rel="stylesheet" href="css/sky-forms.min.css">
-    <link type="text/css" rel="stylesheet" href="css/custom-sky-forms.min.css">
-    <link type="text/css" rel="stylesheet" href="css/profile.min.css">
-    <link type="text/css" rel="stylesheet" href="css/brand-buttons.min.css">
-    <link type="text/css" rel="stylesheet" href="css/brand-buttons-inversed.min.css">
-    <link type="text/css" rel="stylesheet" href="css/hover.min.css">
-    <link type="text/css" rel="stylesheet" href="css/custom-hover-effects.min.css">
-    <link type="text/css" rel="stylesheet" href="css/custom.min.css">
-    <link type="text/css" rel="stylesheet" href="css/pgwslider.min.css">
-    <link type="text/css" rel="stylesheet" href="css/ufps.css">
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/ie8.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/blocks.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/plugins.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/style.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/app.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/shop.plugins.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/shop.blocks.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/style-switcher.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/shop.style.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/header-v6.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/header-v8.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/header.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/footer-v1.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/animate.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/line-icons.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/horizontal-parallax.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/layerslider.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/ured.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/jquery.mCustomScrollbar.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/sky-forms.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/custom-sky-forms.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/profile.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/brand-buttons.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/brand-buttons-inversed.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/hover.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/custom-hover-effects.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/custom.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/pgwslider.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/ufps.css">
 
     @yield("style")
   </head>
@@ -94,11 +94,11 @@
               <div class="row">
                 <div class="col-md-4 col-sm-4 col-xs-5">
                   <a href="index-2.html">
-                    <img id="logo-header" src="rsc/img/logo_vertical_ingsistemas_ht180.png" alt="Logo Programa de Ingeniería de Sistemas" style="max-height:180px;">
+                    <img id="logo-header" src="/rsc/img/logo_vertical_ingsistemas_ht180.png" alt="Logo Programa de Ingeniería de Sistemas" style="max-height:180px;">
                   </a>
                 </div>
                 <div class="col-md-2 col-ms-1 col-xs-2 pull-right">
-                  <a href="http://www.ufps.edu.co/"><img class="header-banner" src="rsc/img/logo_ufps.png" style="max-height:160px;" alt="Escudo de la Universidad Francisco de Paula Santander" ></a>
+                  <a href="http://www.ufps.edu.co/"><img class="header-banner" src="/rsc/img/logo_ufps.png" style="max-height:160px;" alt="Escudo de la Universidad Francisco de Paula Santander" ></a>
                 </div>
               </div>
             </div>
@@ -108,7 +108,7 @@
         <div class="menu-responsive">
           <!-- Logo -->
           <a class="logo logo-responsive" href="index-2.html" style="margin-left:5px;">
-            <img src="rsc/img/horizontal_logo_ingsistemas_pequeno.png" alt="Logo">
+            <img src="/rsc/img/horizontal_logo_ingsistemas_pequeno.png" alt="Logo">
           </a>
           <!-- End Logo -->
           <!-- Toggle get grouped for better mobile display -->
@@ -186,71 +186,71 @@
 
   <div class="owl-clients-v1" style="background-color:#EEE; padding: 5px;">
     <div class="item">
-      <a href="http://www.mineducacion.gov.co/" target="_blank"><img src="rsc/img/mineducacion.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.mineducacion.gov.co/" target="_blank"><img src="/rsc/img/mineducacion.png" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.gobiernoenlinea.gov.co/" target="_blank"><img src="rsc/img/gobiernoenlinea.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.gobiernoenlinea.gov.co/" target="_blank"><img src="/rsc/img/gobiernoenlinea.png" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.contraloriagen.gov.co/" target="_blank"><img src="rsc/img/contraloria.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.contraloriagen.gov.co/" target="_blank"><img src="/rsc/img/contraloria.png" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.procuraduria.gov.co/" target="_blank"><img src="rsc/img/procuraduriageneraldelanacion.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.procuraduria.gov.co/" target="_blank"><img src="/rsc/img/procuraduriageneraldelanacion.png" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.urnadecristal.gov.co/" target="_blank"><img src="rsc/img/urnadecristal.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.urnadecristal.gov.co/" target="_blank"><img src="/rsc/img/urnadecristal.png" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.icfes.gov.co/" target="_blank"><img src="rsc/img/icfes.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.icfes.gov.co/" target="_blank"><img src="/rsc/img/icfes.png" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.icetex.gov.co/" target="_blank"><img src="rsc/img/icetex.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.icetex.gov.co/" target="_blank"><img src="/rsc/img/icetex.png" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.universia.net.co/" target="_blank"><img src="rsc/img/universia.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.universia.net.co/" target="_blank"><img src="/rsc/img/universia.png" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.colombiaaprende.edu.co/" target="_blank"><img src="rsc/img/colombiaaprende.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.colombiaaprende.edu.co/" target="_blank"><img src="/rsc/img/colombiaaprende.png" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.renata.edu.co/" target="_blank"><img src="rsc/img/renata-logo.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.renata.edu.co/" target="_blank"><img src="/rsc/img/renata-logo.png" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.colciencias.gov.co/" target="_blank"><img src="rsc/img/COLCIENCIAS.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.colciencias.gov.co/" target="_blank"><img src="/rsc/img/COLCIENCIAS.png" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.cna.gov.co/" target="_blank"><img src="rsc/img/cna.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.cna.gov.co/" target="_blank"><img src="/rsc/img/cna.png" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.mineducacion.gov.co/sistemasdeinformacion/1735/propertyvalue-41698.html" target="_blank"><img src="rsc/img/SACES.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.mineducacion.gov.co/sistemasdeinformacion/1735/propertyvalue-41698.html" target="_blank"><img src="/rsc/img/SACES.png" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.mineducacion.gov.co/sistemasdeinformacion/1735/w3-propertyname-2672.html" target="_blank"><img src="rsc/img/SNIES.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.mineducacion.gov.co/sistemasdeinformacion/1735/w3-propertyname-2672.html" target="_blank"><img src="/rsc/img/SNIES.png" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.mineducacion.gov.co/sistemasdeinformacion/1735/w3-propertyname-2895.html" target="_blank"><img src="rsc/img/SPADIES.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.mineducacion.gov.co/sistemasdeinformacion/1735/w3-propertyname-2895.html" target="_blank"><img src="/rsc/img/SPADIES.png" class="hover-shadow" alt=""></a>
     </div>
   </div>
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery-migrate.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/pgwslider.min.js"></script>
-  <script type="text/javascript" src="js/back-to-top.min.js"></script>
-  <script type="text/javascript" src="js/smoothScroll.min.js"></script>
-  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-  <script type="text/javascript" src="js/sequence.jquery-min.js"></script>
-  <script type="text/javascript" src="js/greensock.js"></script>
-  <script type="text/javascript" src="js/layerslider.transitions.js"></script>
-  <script type="text/javascript" src="js/layerslider.kreaturamedia.jquery.js"></script>
-  <script type="text/javascript" src="js/custom.min.js"></script>
-  <script type="text/javascript" src="js/app.min.js"></script>
-  <script type="text/javascript" src="js/owl-carousel.min.js"></script>
-  <script type="text/javascript" src="js/datepicker.min.js"></script>
-  <script type="text/javascript" src="js/validation.min.js"></script>
-  <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-  <script type="text/javascript" src="js/owl-recent-works.min.js"></script>
-  <script type="text/javascript" src="js/wow.min.js"></script>
-  <script type="text/javascript" src="js/ufps.js"></script>
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery-migrate.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/js/pgwslider.min.js"></script>
+  <script type="text/javascript" src="/js/back-to-top.min.js"></script>
+  <script type="text/javascript" src="/js/smoothScroll.min.js"></script>
+  <script type="text/javascript" src="/js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="/js/sequence.jquery-min.js"></script>
+  <script type="text/javascript" src="/js/greensock.js"></script>
+  <script type="text/javascript" src="/js/layerslider.transitions.js"></script>
+  <script type="text/javascript" src="/js/layerslider.kreaturamedia.jquery.js"></script>
+  <script type="text/javascript" src="/js/custom.min.js"></script>
+  <script type="text/javascript" src="/js/app.min.js"></script>
+  <script type="text/javascript" src="/js/owl-carousel.min.js"></script>
+  <script type="text/javascript" src="/js/datepicker.min.js"></script>
+  <script type="text/javascript" src="/js/validation.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script type="text/javascript" src="/js/owl-recent-works.min.js"></script>
+  <script type="text/javascript" src="/js/wow.min.js"></script>
+  <script type="text/javascript" src="/js/ufps.js"></script>
 
   @yield("scripts")
 

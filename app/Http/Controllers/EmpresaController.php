@@ -18,6 +18,12 @@ class EmpresaController extends Controller
   }
 
   public function postAgregar(Request $request){
-    dd($request->all());
+    Empresa::create($request->all());
+    return view($this->direccion.'agregar',["msj"=>"Se registro correctamente un la empresa"]);
+  }
+
+  public function getEditar($id){
+    $empresa=Empresa::where('id',$id)->first();
+    return view($this->direccion."editar",compact('empresa'));
   }
 }

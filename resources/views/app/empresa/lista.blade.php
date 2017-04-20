@@ -5,6 +5,16 @@
 
 @section('content')
 
+<div class="container content-prin profile">
+  <div class="row margin-top-10">
+    <div class="headline-center-v2 headline-center-v2-dark margin-bottom-10">
+      <h1 class="shop-h1" style="font-size: 30px;"><b>Listado de empresas </b></h1>
+      <span class="bordered-icon"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span>
+    </div>
+    <div class="col-md-12">
+      <div class="row equal-height-columns margin-bottom-10">
+        <div class="container">
+
 
 <div id="listar_abogados">
     <section class="content-header">
@@ -38,15 +48,15 @@
                                 <thead>
                                 <tr role="row">
                                     <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending"
-                                        aria-label="Rendering engine: activate to sort column descending" style="width: 105px;">Radicado</th>
+                                        aria-label="Rendering engine: activate to sort column descending" style="width: 105px;">Nombre</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                                        aria-label="Browser: activate to sort column ascending" style="width: 150px;">Cliente</th>
+                                        aria-label="Browser: activate to sort column ascending" style="width: 150px;">NIT</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
-                                        style="width: 131px;">Descripción</th>
+                                        style="width: 131px;">Representante</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                                        aria-label="CSS grade: activate to sort column ascending" style="width: 100px;">Fecha inicio</th>
+                                        aria-label="CSS grade: activate to sort column ascending" style="width: 100px;">Ciudad</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
-                                        style="width: 101px;">Estado</th>
+                                        style="width: 101px;">Dirección</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                         aria-label="CSS grade: activate to sort column ascending" style="width: 70px;">Acciones</th>
 
@@ -58,16 +68,11 @@
 
                                     <tr role="row">
                                      <a href="#">
-                                        <td>{{$dato->radicado}}</td>
-                                        <td>{{$dato->nombre_cliente}}</td>
-                                        <td>{{$dato->descripcion}}</td>
-                                        <td>{{$dato->fecha_inicio}}</td>
-                                        @if($dato->estado)
-                                            <td><span class="label label-success">Aprobado</span></td>
-                                        @else
-                                            <td><span class="label label-warning">Pendiente</span></td>
-                                        @endif
-                                        <!--<td>{{$caso->estado}}</td>-->
+                                        <td>{{$dato->nombre}}</td>
+                                        <td>{{$dato->nit}}</td>
+                                        <td>{{$dato->representante}}</td>
+                                        <td>{{$dato->ciudad}}</td>
+                                        <td>{{$dato->direccion}}</td>
                                         <td><a href="/editar-empresa/{{$dato->id}}" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
                                         <a href="/eliminar-empresa/{{$dato->id}}" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" ><i class="fa fa-times-circle"></i></a>
                                      </a>
@@ -89,6 +94,14 @@
     </section>
 
 </div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
 
 @endsection
 
