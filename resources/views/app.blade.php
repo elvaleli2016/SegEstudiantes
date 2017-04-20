@@ -127,16 +127,23 @@
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Docentes</a>
     <ul class="dropdown-menu">
-      <li><a href="/docentes/registrar">Registrar </a></li>
-      <li><a href="/docentes/listar">Listar</a></li>
+      <li><a href="/agregar-docente">Registrar </a></li>
+      <li><a href="/listar-docente">Listar</a></li>
     </ul>
   </li>
 
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Estudiantes</a>
     <ul class="dropdown-menu">
-      <li><a href="/estudiantes/registrar">Registrar </a></li>
-      <li><a href="/estudiantes/listar">Listar</a></li>
+      <li><a href="/agregar-estudiante">Registrar </a></li>
+      <li><a href="/listar-docente">Listar</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Empresas</a>
+    <ul class="dropdown-menu">
+      <li><a href="/agregar-empresa">Registrar </a></li>
+      <li><a href="/listar-empresa">Listar</a></li>
     </ul>
   </li>
 
