@@ -48,6 +48,8 @@ Route::post('/agregar-empresa', ['as' => 'app.empresa.agregar', 'uses' => 'Empre
 Route::get('/editar-empresa/{id}', ['as' => 'app.empresa.editar/{id}', 'uses' => 'EmpresaController@getEditar']);
 Route::post('/editar-empresa', ['as' => 'app.empresa.editar', 'uses' => 'EmpresaController@postEditar']);
 
+Route::get('/listar-empresa', ['as' => 'app.empresa.listar', 'uses' => 'EmpresaController@index']);
+
 Route::get('/eliminar-empresa', ['as' => 'app.empresa.eliminar', 'uses' => 'EmpresaController@getEliminar']);
 Route::post('/eliminar-empresa', ['as' => 'app.empresa.eliminar', 'uses' => 'EmpresaController@postEliminar']);
 

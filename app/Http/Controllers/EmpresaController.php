@@ -12,6 +12,11 @@ class EmpresaController extends Controller
     $this->direccion="app.empresa.";
   }
 
+  public function index(){
+    $empresas=Empresa::all();
+    return view("app/empresa/lista",compact("empresas"));
+  }
+
   public function getAgregar()
   {
     return view($this->direccion.'agregar');
@@ -19,11 +24,20 @@ class EmpresaController extends Controller
 
   public function postAgregar(Request $request){
     Empresa::create($request->all());
-    return view($this->direccion.'agregar',["msj"=>"Se registro correctamente un la empresa"]);
+    return view($this->direccion.'agregar',["msj"=>"Se registro correctamente la empresa"]);
   }
 
   public function getEditar($id){
     $empresa=Empresa::where('id',$id)->first();
     return view($this->direccion."editar",compact('empresa'));
   }
+
+  public function postEditar(Request $request){
+    $empresa=Empresa::findOrFail($request->id);
+    $empresa->fill($request->all());
+    $empresa->save();
+    return view($this->direccion.'editar',["msj"=>"Se modificado correctamente la empresa ".$request['nombre'] ],compact('empresa'));
+  }
+
+
 }
