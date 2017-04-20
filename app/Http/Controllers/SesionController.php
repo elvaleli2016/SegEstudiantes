@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Administrador;
 use App\Docente;
 use App\Usuario;
+use App\Empresa;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
 
@@ -42,6 +43,7 @@ class SesionController extends Controller
       $user['telefono']=$usuario->telefono;
       $user['tipo']=$request['tipo_cuenta'];
       Session::put('usuario',$user->toArray());
-      return view("app");
+      $empresas=Empresa::all();
+      return view("app/empresa/lista",compact("empresas"));
     }
 }

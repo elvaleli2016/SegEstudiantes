@@ -15,7 +15,13 @@ class CreatePasantiasTable extends Migration
     {
         Schema::create('pasantias', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('titulo');
+            $table->string('descripcion');
+            $table->integer('estudiante')->unsigned();
+            $table->integer('tutpr')->unsigned();
             $table->timestamps();
+
+            $table->foreign('estudiante')->references('id')->on('estudiantes');
         });
     }
 

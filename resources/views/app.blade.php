@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es"> 
+<html lang="es">
 
 <!-- Mirrored from ingsistemas.ufps.edu.co/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 12 Apr 2017 02:40:50 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
@@ -46,6 +46,8 @@
     <link type="text/css" rel="stylesheet" href="css/custom.min.css">
     <link type="text/css" rel="stylesheet" href="css/pgwslider.min.css">
     <link type="text/css" rel="stylesheet" href="css/ufps.css">
+
+    @yield("style")
   </head>
   <body class="header-fixed boxed-layout" style="position: relative; min-height: 100%; top: 0px;">
     <!--Contenido-->
@@ -150,6 +152,9 @@
       </div><!--header-v6-->
 
 <!-- FORMULARIO -->
+@yield("content")
+
+<!--
   <div class="container content-prin profile">
     <div class="row margin-top-10">
       <div class="headline-center-v2 headline-center-v2-dark margin-bottom-10">
@@ -159,12 +164,13 @@
       <div class="col-md-12">
         <div class="row equal-height-columns margin-bottom-10">
           <div class="container">
-              <!-- FORMULARIO CREO QUE AQUI -->
+               FORMULARIO CREO QUE AQUI
           </div>
         </div>
       </div>
     </div>
   </div>
+-->
 <!--fin FORMULARIO -->
 
 </div>
@@ -238,6 +244,9 @@
   <script type="text/javascript" src="js/owl-recent-works.min.js"></script>
   <script type="text/javascript" src="js/wow.min.js"></script>
   <script type="text/javascript" src="js/ufps.js"></script>
+
+  @yield("scripts")
+
   <!--[if lt IE 9]>
     <script src="js/respond.js"></script>
     <script src="js/html5shiv.js"></script>

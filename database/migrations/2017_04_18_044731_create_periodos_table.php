@@ -17,7 +17,12 @@ class CreatePeriodosTable extends Migration
             $table->increments('id');
             $table->string('fecha_dia');
             $table->string('tipo_periodo');
+            $table->integer('id_pasantia')->unsigned()-->nullable();
+            $table->integer('id_pactica')->unsigned()-->nullable();
             $table->timestamps();
+
+            $table->foreign('id_practica')->references('id')->on('pacticas');
+            $table->foreign('id_pasantia')->references('id')->on('pasantias');
         });
     }
 
