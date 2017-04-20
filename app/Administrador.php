@@ -11,7 +11,7 @@ class Administrador extends Model
      *
      * @var string
      */
-    protected $table = 'administradors';
+    protected $table = 'administradores';
 
     /**
      * The attributes that are mass assignable.

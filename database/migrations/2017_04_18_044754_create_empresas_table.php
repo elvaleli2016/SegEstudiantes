@@ -22,6 +22,13 @@ class CreateEmpresasTable extends Migration
             $table->string('direccion');
             $table->timestamps();
         });
+
+        Schema::table('convenios', function ($table) {
+          $table->integer('empresa')->unsigned();
+          $table->foreign('empresa')->references('id')->on('empresas');
+        });
+
+
     }
 
     /**

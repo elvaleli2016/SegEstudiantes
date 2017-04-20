@@ -18,10 +18,21 @@ class CreatePasantiasTable extends Migration
             $table->string('titulo');
             $table->string('descripcion');
             $table->integer('estudiante')->unsigned();
-            $table->integer('tutpr')->unsigned();
+            $table->integer('tutor')->unsigned();
             $table->timestamps();
 
             $table->foreign('estudiante')->references('id')->on('estudiantes');
+            $table->foreign('tutor')->references('id')->on('docentes');
+        });
+
+        Schema::table('periodos', function ($table) {
+          $table->integer('pasantia')->unsigned()->nullable();
+          $table->foreign('pasantia')->references('id')->on('pasantias');
+        });
+
+        Schema::table('convenios', function ($table) {
+          $table->integer('pasantia')->unsigned()->nullable();
+          $table->foreign('pasantia')->references('id')->on('pasantias');
         });
     }
 

@@ -16,8 +16,9 @@ class CreateEstudiantesTable extends Migration
         Schema::create('estudiantes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('codigo');
-            $table->foreign('id')->references('id')->on('usuarios');
             $table->timestamps();
+
+            $table->foreign('id')->references('id')->on('usuarios');
         });
     }
 

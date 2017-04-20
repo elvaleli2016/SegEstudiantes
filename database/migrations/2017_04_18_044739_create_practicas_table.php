@@ -18,11 +18,23 @@ class CreatePracticasTable extends Migration
             $table->string('titulo');
             $table->string('descripcion');
             $table->integer('estudiante')->unsigned();
-            $table->integer('tutpr')->unsigned();
+            $table->integer('tutor')->unsigned();
             $table->timestamps();
 
             $table->foreign('estudiante')->references('id')->on('estudiantes');
+            $table->foreign('tutor')->references('id')->on('docentes');
         });
+
+        Schema::table('periodos', function ($table) {
+          $table->integer('practica')->unsigned()->nullable();
+          $table->foreign('practica')->references('id')->on('practicas');
+        });
+
+        Schema::table('convenios', function ($table) {
+          $table->integer('practica')->unsigned()->nullable();
+          $table->foreign('practica')->references('id')->on('practicas');
+        });
+
     }
 
     /**

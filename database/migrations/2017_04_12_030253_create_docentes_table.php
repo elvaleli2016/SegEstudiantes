@@ -18,8 +18,9 @@ class CreateDocentesTable extends Migration
             $table->string('usuario');
             $table->string('password');
             $table->string('codigo');
-            $table->foreign('id')->references('id')->on('usuarios');
             $table->timestamps();
+
+            $table->foreign('id')->references('id')->on('usuarios');
         });
     }
 

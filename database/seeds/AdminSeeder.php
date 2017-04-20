@@ -13,19 +13,21 @@ class AdminSeeder extends Seeder
     {
         //$start = new DateTime(date('Y-m-d H:i:s', $val));
         DB::table('usuarios')->insert([
-          'nombre'=>'Pilar Rodrigez',
+          'nombre'=>'Pilar',
+          'apellido'=>"Rodrigez",
           'tipo_identificacion'=>'cedula',
           'identificacion'=>'11111111'
         ]);
 
-        DB::table('administradors')->insert([
+        DB::table('administradores')->insert([
           'id'=>'1',
           'usuario'=>'admin',
-          'contrasena'=>'12345'
+          'password'=>'12345'
         ]);
 
         DB::table('usuarios')->insert([
           'nombre'=>'Doctor',
+          'apellido'=>"Tor",
           'tipo_identificacion'=>'cedula',
           'identificacion'=>'11111112'
         ]);
@@ -33,12 +35,13 @@ class AdminSeeder extends Seeder
         DB::table('docentes')->insert([
           'id'=>2,
           'usuario'=>'docente',
-          'contrasena'=>'12345',
+          'password'=>'12345',
           'codigo'=>'1052345'
         ]);
 
         DB::table('usuarios')->insert([
           'nombre'=>'Eliam',
+          'apellido'=>'Zapata',
           'tipo_identificacion'=>'cedula',
           'identificacion'=>'11111113'
         ]);
