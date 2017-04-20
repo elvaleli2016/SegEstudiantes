@@ -159,7 +159,13 @@
       <div class="col-md-12">
         <div class="row equal-height-columns margin-bottom-10">
           <div class="container">
-              <!-- FORMULARIO CREO QUE AQUI -->
+          <style type="text/css">
+            .center_div{
+                margin: 0 auto;
+                width:40%
+            }
+          </style>
+              @yield('content')
           </div>
         </div>
       </div>
