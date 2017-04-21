@@ -41,6 +41,8 @@ Route::post('/editar-docente', ['as' => 'app.docente.editar', 'uses' => 'Docente
 Route::get('/eliminar-docente', ['as' => 'app.docente.eliminar', 'uses' => 'DocenteController@getEliminar']);
 Route::post('/eliminar-docente', ['as' => 'app.docente.eliminar', 'uses' => 'DocenteController@postEliminar']);
 
+Route::get('/listar-docente', ['as' => 'app.docente.listar', 'uses' => 'DocenteController@index']);
+
 /* Empresas */
 Route::get('/agregar-empresa', ['as' => 'app.empresa.agregar', 'uses' => 'EmpresaController@getAgregar']);
 Route::post('/agregar-empresa', ['as' => 'app.empresa.agregar', 'uses' => 'EmpresaController@postAgregar']);
@@ -62,6 +64,8 @@ Route::post('/editar-estudiante', ['as' => 'app.estudiante.editar', 'uses' => 'E
 
 Route::get('/eliminar-estudiante', ['as' => 'app.estudiante.eliminar', 'uses' => 'EstudianteController@getEliminar']);
 Route::post('/eliminar-estudiante', ['as' => 'app.estudiante.eliminar', 'uses' => 'EstudianteController@postEliminar']);
+
+Route::get('/listar-estudiante', ['as' => 'app.estudiante.listar', 'uses' => 'EstudianteController@index']);
 
 /* Pasantias */
 Route::get('/agregar-pasantia', ['as' => 'app.pasantia.agregar', 'uses' => 'PasantiaController@getAgregar']);

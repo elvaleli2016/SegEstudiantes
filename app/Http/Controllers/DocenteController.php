@@ -4,26 +4,49 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Docente;
+use App\Usuario;
 
 class DocenteController extends Controller
 {
-    //
+  public $direccion;
 
-
-
-    public function getAgregar()
-    {
-    	return view('app.docente.agregar');
-/*        if (Session::has('users')) {
-            $id = Session::get('users.id');
-            $user = User::where('id', $id)->first();
-            $paso1 = Paso1persona::where('user_id', $id)->first();
-            $laboral = Laboral::where('user_id', $id)->first();
-            $empresa = Empresa::where('user_id', $id)->first();
-            if ($user['tipo'] == 'usuario') return view('app.user.settings-account', compact('user', 'laboral', 'paso1'));
-            else return view('app.user.settings-account', compact('user', 'laboral', 'paso1', 'empresa'));
-        } else {
-            return Redirect::route('app.home.index');
-        }*/
+  function __construct(){
+    $this->direccion="app.docente.";
+  }
+// LISTA
+  public function index(){
+    $docentes=Docente::all();
+    foreach ($docentes as $d) {
+      $usuario=Usuario::where('id',$d->id)->first();
+      $d['nombre']=$usuario->nombre;
+      $d['apellido']=$usuario->apellido;
     }
+
+    return view($this->direccion."lista",compact("docentes"));
+  }
+
+  public function getAgregar()
+  {
+    return view($this->direccion.'agregar');
+  }
+
+  public function postAgregar(Request $request){
+    $usuario = Usuario::create($request->all());
+    $request['id'] = $usuario->id;
+    $docente = Docente::create($request->all());
+    return view($this->direccion.'agregar',["msj"=>"Se registro correctamente el docente"]);
+  }
+
+  public function getEditar($id){
+
+    //return view($this->direccion."editar",compact(''));
+  }
+
+  public function postEditar(Request $request){
+
+  }
+
+  public function getEliminar($id){
+
+  }
 }

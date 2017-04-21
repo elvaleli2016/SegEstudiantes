@@ -11,7 +11,7 @@ class Docente extends Model
      *
      * @var string
      */
-    protected $table = 'convenios';
+    protected $table = 'docentes';
  
     /**
      * The attributes that are mass assignable.
