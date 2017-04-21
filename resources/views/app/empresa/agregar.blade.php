@@ -8,5 +8,23 @@
 @endsection
 
 @section('script')
+<script>
+    var app = new Vue({
+        el: "#registrar_cliente",
+        data: {
+            image: {},
 
+        },
+        methods: {
+            loadImage: function () {
+                var output = document.getElementById('preview');
+                output.src = URL.createObjectURL(event.target.files[0]);
+                this.image = event.target.files[0];
+                console.log(output.src);
+            },
+        }
+    });
+  
+
+</script>
 @endsection

@@ -8,7 +8,7 @@
 <div class="container content-prin profile">
   <div class="row margin-top-10">
     <div class="headline-center-v2 headline-center-v2-dark margin-bottom-10">
-      <h1 class="shop-h1" style="font-size: 30px;"><b>Listado de empresas </b></h1>
+      <h1 class="shop-h1" style="font-size: 30px;"><b>Listado pasantias </b></h1>
       <span class="bordered-icon"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span>
     </div>
     <div class="col-md-12">
@@ -16,7 +16,7 @@
         <div class="container">
 
 
-<div id="listar_abogados">
+<div id="listar_pasantias">
     <section class="content-header">
         <div class="row">
             <div class="col-md-4 col-sm-4" id="contenido-cabecera">
@@ -48,33 +48,33 @@
                                 <thead>
                                 <tr role="row">
                                     <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending"
-                                        aria-label="Rendering engine: activate to sort column descending" style="width: 105px;">Nombre</th>
+                                        aria-label="Rendering engine: activate to sort column descending" style="width: 105px;">No Convenio</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                                        aria-label="Browser: activate to sort column ascending" style="width: 150px;">NIT</th>
+                                        aria-label="Browser: activate to sort column ascending" style="width: 150px;">Nombre estudiante</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
-                                        style="width: 131px;">Representante</th>
+                                        style="width: 131px;">Nombre tutor</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                                        aria-label="CSS grade: activate to sort column ascending" style="width: 100px;">Ciudad</th>
+                                        aria-label="CSS grade: activate to sort column ascending" style="width: 100px;">Concepto</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
-                                        style="width: 101px;">Dirección</th>
+                                        style="width: 101px;">Fecha</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                         aria-label="CSS grade: activate to sort column ascending" style="width: 70px;">Acciones</th>
 
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach ($empresas as $dato)
+                                @foreach ($pasantias as $dato)
 
 
                                     <tr role="row">
                                      <a href="#">
-                                        <td>{{$dato->nombre}}</td>
-                                        <td>{{$dato->nit}}</td>
-                                        <td>{{$dato->representante}}</td>
-                                        <td>{{$dato->ciudad}}</td>
-                                        <td>{{$dato->direccion}}</td>
-                                        <td><a href="/editar-empresa/{{$dato->id}}" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
-                                        <a href="/eliminar-empresa/{{$dato->id}}" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" ><i class="fa fa-times-circle"></i></a>
+                                        <td>{{$dato['n_convenio']}}</td>
+                                        <td>{{$dato['estudiante']}}</td>
+                                        <td>{{$dato['tutor']}}</td>
+                                        <td>{{$dato['concepto']}}</td>
+                                        <td>{{$dato['fecha']}}</td>
+                                        <td><a href="/editar-pasantia/{{$dato->id}}" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
+                                        <a href="/eliminar-pasantia/{{$dato->id}}" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" ><i class="fa fa-times-circle"></i></a>
                                      </a>
                                     </tr>
 
