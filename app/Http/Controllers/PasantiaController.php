@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Pasantia;
 use App\Docente;
@@ -33,7 +34,9 @@ class PasantiaController extends Controller
 
   public function getAgregar()
   {
-    return view($this->direccion.'agregar');
+    $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();
+    $docentes=DB::table('usuarios')->join('docentes','usuarios.id','=','docentes.id')->get();
+    return view($this->direccion.'agregar',compact('estudiantes','docentes'));
   }
 
   public function postAgregar(Request $request){
