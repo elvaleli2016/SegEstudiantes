@@ -147,6 +147,21 @@
     </ul>
   </li>
 
+  <li class="dropdown">
+    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Pasantias</a>
+    <ul class="dropdown-menu">
+      <li><a href="/agregar-pasantia">Registrar </a></li>
+      <li><a href="/listar-pasantia">Listar</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Practica</a>
+    <ul class="dropdown-menu">
+      <li><a href="/agregar-practica">Registrar </a></li>
+      <li><a href="/listar-practica">Listar</a></li>
+    </ul>
+  </li>
+
 
   <li class="nodropdown">
     <a href="#" class="dropdown-toggle disabled" data-toggle="dropdown" target="_blank">Información</a>

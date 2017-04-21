@@ -14,7 +14,7 @@ class EmpresaController extends Controller
 
   public function index(){
     $empresas=Empresa::all();
-    return view("app/empresa/lista",compact("empresas"));
+    return view($this->direccion."lista",compact("empresas"));
   }
 
   public function getAgregar()
