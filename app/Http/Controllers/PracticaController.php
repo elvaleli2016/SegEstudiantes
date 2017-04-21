@@ -39,8 +39,24 @@ class PracticaController extends Controller
   }
 
   public function postAgregar(Request $request){
+    dd($request->all());
+    $pracicas=new Practica();
+    $practica->titulo=$request['titulo'];
+    $practica->descripcion=$request['descripcion'];
+    $practica->estudiante=$request['estudiante'];
+    $practica->tutor=$request['tutor'];
+    $parctica->save();
 
-    return view($this->direccion.'agregar',["msj"=>"Se registro correctamente la empresa"]);
+    $convenio=new Convenio();
+    $convenio->fecha=$request['fecha'];
+    $convenio->n_conveio=$request['n_convenio'];
+    $convenio->concepto=$requess['concepto'];
+    $convenio->palabra_clave=$request['palabra_clave'];
+    $convenio->tipo="practica";
+    $convenio->practica=$practica->id;
+    $convenio->save();
+
+    return view($this->direccion.'agregar',["msj"=>"Se registro correctamente la practica"]);
   }
 
   public function getEditar($id){

@@ -12,11 +12,11 @@ class Practica extends Model
      * @var string
      */
     protected $table = 'practicas';
- 
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['id'];
+    protected $fillable = ['id','titulo','descripcion','estudiante','tutor'];
 }
