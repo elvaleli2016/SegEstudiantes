@@ -8,5 +8,12 @@
 @endsection
 
 @section('script')
+<script>
 
+    $('body').on('focus', "input[name='fecha']", function () {
+        $(this).datepicker({
+            autoclose: true
+        });
+    });
+</script>
 @endsection

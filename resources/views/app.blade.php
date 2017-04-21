@@ -136,7 +136,7 @@
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Estudiantes</a>
     <ul class="dropdown-menu">
       <li><a href="/agregar-estudiante">Registrar </a></li>
-      <li><a href="/listar-docente">Listar</a></li>
+      <li><a href="/listar-estudiante">Listar</a></li>
     </ul>
   </li>
   <li class="dropdown">
