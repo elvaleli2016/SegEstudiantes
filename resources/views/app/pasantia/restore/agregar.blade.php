@@ -34,13 +34,13 @@
                                   <div class="row">
                                       <div class="col-md-4">
                                           <div class="form-group">
-                                              <label>NIT</label>
+                                              <label>Titulo</label>
                                               <input required type="text" class="form-control" name="titulo" placeholder="Titulo" value="">
                                           </div>
                                       </div>
                                       <div class="col-md-12">
                                           <div class="form-group">
-                                              <label>Nombre</label>
+                                              <label>Descripción</label>
                                               <input required type="text" class="form-control" name="descripcion" placeholder="Digita la descripciÓn" value=''>
                                           </div>
                                       </div>
@@ -92,7 +92,7 @@
                                       </div>
                                       <div class="col-md-6">
                                           <div class="form-group">
-                                              <label>Fecha:</label>
+                                              <label>Fecha</label>
 
                                               <div class="input-group date">
                                                   <div class="input-group-addon">
