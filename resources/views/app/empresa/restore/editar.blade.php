@@ -55,6 +55,18 @@
                                   <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
+                                            <label>Telefono</label>
+                                            <input required type="text" class="form-control" name="telefono" placeholder="Digita el telefono" value="{{$empresa->telefono}}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Correo</label>
+                                            <input required type="email" class="form-control" name="correo" placeholder="Digita el correo" value="{{$empresa->correo}}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
                                             <label>Ciudad</label>
                                             <input required type="text" class="form-control" name="ciudad" placeholder="Digita la ciudad" value="{{$empresa->ciudad}}">
                                         </div>
