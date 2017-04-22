@@ -18,6 +18,8 @@ class CreateEmpresasTable extends Migration
             $table->string('nombre');
             $table->string('nit');
             $table->string('representante');
+            $table->string('correo')->nullable();
+            $table->string('telefono')->nullable();
             $table->string('ciudad');
             $table->string('direccion');
             $table->timestamps();

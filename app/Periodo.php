@@ -12,11 +12,11 @@ class Periodo extends Model
      * @var string
      */
     protected $table = 'periodos';
- 
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['id', 'fecha_dia', 'tipo_periodo'];
+    protected $fillable = ['id', 'fecha_dia', 'nota','descripcion','archivo','tipo_periodo','practica','pasantia'];
 }

@@ -12,11 +12,11 @@ class Empresa extends Model
      * @var string
      */
     protected $table = 'empresas';
- 
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['id', 'nombre', 'nit', 'representante', 'ciudad', 'direccion'];
+    protected $fillable = ['id', 'nombre', 'nit', 'representante','telefono','correo','ciudad', 'direccion'];
 }

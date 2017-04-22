@@ -16,10 +16,16 @@ class CreateConveniosTable extends Migration
         Schema::create('convenios', function (Blueprint $table) {
             $table->increments('id');
             $table->string('n_convenio');
+            $table->string('representante_emp')->nullable();
+            $table->string('representante_uni')->nullable();
             $table->date('fecha');
             $table->string('concepto');
+            $table->string('descripcion')->nullable();
+            $table->string('costo')->nullable();
+            $table->string('archivo');
             $table->string('palabras_clave');
-            $table->enum("tipo",['pasantia','practica']);
+            $table->date('fecha_ini');
+            $table->date('fecha_fin');
             $table->timestamps();
 
         });

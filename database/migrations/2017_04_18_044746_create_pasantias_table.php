@@ -19,10 +19,14 @@ class CreatePasantiasTable extends Migration
             $table->string('descripcion');
             $table->integer('estudiante')->unsigned();
             $table->integer('tutor')->unsigned();
+            $table->integer('convenio')->unsigned();
+            $table->date('fecha_ini');
+            $table->date('fecha_fin');
             $table->timestamps();
 
             $table->foreign('estudiante')->references('id')->on('estudiantes');
             $table->foreign('tutor')->references('id')->on('docentes');
+            $table->foreign('convenio')->references('id')->on('convenios');
         });
 
         Schema::table('periodos', function ($table) {
@@ -30,10 +34,6 @@ class CreatePasantiasTable extends Migration
           $table->foreign('pasantia')->references('id')->on('pasantias');
         });
 
-        Schema::table('convenios', function ($table) {
-          $table->integer('pasantia')->unsigned()->nullable();
-          $table->foreign('pasantia')->references('id')->on('pasantias');
-        });
     }
 
     /**
