@@ -146,6 +146,13 @@
       <li><a href="/listar-empresa">Listar</a></li>
     </ul>
   </li>
+  <li class="dropdown">
+    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Convenios</a>
+    <ul class="dropdown-menu">
+      <li><a href="/agregar-convenio">Registrar </a></li>
+      <li><a href="/listar-convenio">Listar</a></li>
+    </ul>
+  </li>
 
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Pasantias</a>

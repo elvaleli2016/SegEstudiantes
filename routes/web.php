@@ -25,11 +25,13 @@ Route::post("/inicio",'SesionController@validar');
 Route::get('/agregar-convenio', ['as' => 'app.convenio.agregar', 'uses' => 'ConvenioController@getAgregar']);
 Route::post('/agregar-convenio', ['as' => 'app.convenio.agregar', 'uses' => 'ConvenioController@postAgregar']);
 
-Route::get('/editar-convenio', ['as' => 'app.convenio.editar', 'uses' => 'ConvenioController@getEditar']);
+Route::get('/editar-convenio/{id}', ['as' => 'app.convenio.editar/{id}', 'uses' => 'ConvenioController@getEditar']);
 Route::post('/editar-convenio', ['as' => 'app.convenio.editar', 'uses' => 'ConvenioController@postEditar']);
 
 Route::get('/eliminar-convenio', ['as' => 'app.convenio.eliminar', 'uses' => 'ConvenioController@getEliminar']);
 Route::post('/eliminar-convenio', ['as' => 'app.convenio.eliminar', 'uses' => 'ConvenioController@postEliminar']);
+
+Route::get('/listar-convenio', ['as' => 'app.convenio.agregar', 'uses' => 'ConvenioController@index']);
 
 /* Docentes */
 Route::get('/agregar-docente', ['as' => 'app.docente.agregar', 'uses' => 'DocenteController@getAgregar']);
