@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Convenio;
+use App\Convenios;
 use App\Empresa;
 use Illuminate\Http\Request;
 
@@ -14,13 +14,14 @@ class ConvenioController extends Controller
     $this->direccion="app.convenio.";
   }
   public function index(){
-    $convenios=Convenio::all();
+    $convenios=Convenios::orderBy('empresa')->get();
     //$convenios=Empresa::all();
     return view($this->direccion."lista",compact("convenios"));
   }
 
   public function getAgregar(){
-
+    $empresas=Empresa::all();
+    return view($this->direccion.'agregar',compact('empresas'));
   }
 
   public function postAgregar(Request $request){
