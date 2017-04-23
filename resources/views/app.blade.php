@@ -274,7 +274,7 @@
   <script type="text/javascript" src="/js/wow.min.js"></script>
   <script type="text/javascript" src="/js/ufps.js"></script>
 
-  @yield("scripts")
+  @yield("script")
 
   <!--[if lt IE 9]>
     <script src="js/respond.js"></script>

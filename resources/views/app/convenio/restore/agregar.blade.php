@@ -45,8 +45,8 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Empresa</label>
-                                            <select requerid class=" selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="empresa" data-live-search="true">
-                                                
+                                            <select requerid class=" selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="empresa" id="empresa" data-live-search="true">
+                                                <option selected></option>
                                                 @foreach ($empresas as $dato)
                                                     <option data-tokens="{{$dato->id}}" value="{{$dato->id}}">{{$dato->nombre}}</option>
                                                 @endforeach
@@ -94,7 +94,7 @@
                                                   <div class="input-group-addon">
                                                       <i class="fa fa-calendar"></i>
                                                   </div>
-                                                  <input required type="text" class="form-control pull-right" name="fecha_fin" id="datepicker"
+                                                  <input required type="text" class="form-control pull-right" name="fecha_fin"
                                                          value="">
                                               </div>
                                               <!-- /.input group -->
@@ -116,7 +116,7 @@
                               <div class="box-footer">
                                 <div class="row">
                                   <div class="col-md-6">
-                                    <input type="reset" class="btn btn-sm btn-block btn" id="registrar" value="RESTAURAR" style="">
+                                    <input type="reset" class="btn btn-sm btn-block btn" id="restaurar" value="RESTAURAR" style="">
                                   </div>
                                   <div class="col-xs-6">
                                     <input type="submit" class="btn btn-sm btn-block btn-danger" id="registrar" value="REGISTRAR" style="">
