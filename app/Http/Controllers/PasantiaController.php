@@ -8,6 +8,7 @@ use App\Pasantia;
 use App\Docente;
 use App\Estudiante;
 use App\Convenio;
+use App\Empresa;
 
 class PasantiaController extends Controller
 {
@@ -34,9 +35,10 @@ class PasantiaController extends Controller
 
   public function getAgregar()
   {
+    $empresas=Empresa::all();
     $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();
     $docentes=DB::table('usuarios')->join('docentes','usuarios.id','=','docentes.id')->get();
-    return view($this->direccion.'agregar',compact('estudiantes','docentes'));
+    return view($this->direccion.'agregar',compact('estudiantes','docentes','empresas'));
   }
 
   public function postAgregar(Request $request){
