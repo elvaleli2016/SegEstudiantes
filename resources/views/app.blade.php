@@ -273,6 +273,7 @@
   <script type="text/javascript" src="/js/owl-recent-works.min.js"></script>
   <script type="text/javascript" src="/js/wow.min.js"></script>
   <script type="text/javascript" src="/js/ufps.js"></script>
+  <script type="text/javascript" src="/js/base.js"></script>
 
   @yield("script")
 
