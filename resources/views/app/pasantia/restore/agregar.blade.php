@@ -46,6 +46,25 @@
                                       </div>
                                       <div class="col-md-6">
                                           <div class="form-group">
+                                              <label>Empresa</label>
+                                              <select requerid class=" selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="empresa" data-live-search="true">
+                                                <option selected></option>
+                                                  @foreach ($empresas as $dato)
+                                                      <option data-tokens="{{$dato->id}}" value="{{$dato->id}}">{{$dato->nombre}}</option>
+                                                  @endforeach
+                                              </select>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label>Convenio</label>
+                                              <select requerid class=" selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="convenio" data-live-search="true">
+
+                                              </select>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group">
                                               <label>Estudiante</label>
                                               <select requerid class=" selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="estudiante" data-live-search="true">
                                                   <option selected></option>
@@ -67,46 +86,7 @@
                                           </div>
                                       </div>
                                   </div>
-                                  <div class="col-xs-12">
-                                      <h1 class="shop-h1" style="font-size: 30px;"><b>Convenio</b></h1>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label>No covenio</label>
-                                            <input required type="text" class="form-control" name="n_convenio" placeholder="Numero de convenio" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12"></div>
-                                      <div class="col-md-6">
-                                          <div class="form-group">
-                                              <label for="exampleInputPassword1">Concepto</label>
-                                              <input type="text" class="form-control" name="concepto"  placeholder="Digita lel concepto">
-                                          </div>
-                                      </div>
-                                      <div class="col-md-6">
-                                          <div class="form-group">
-                                              <label for="exampleInputPassword1">Palabra clave</label>
-                                              <input type="text" class="form-control" name="palabra_clave"  placeholder="Digita la palabra clave">
-                                          </div>
-                                      </div>
-                                      <div class="col-md-6">
-                                          <div class="form-group">
-                                              <label>Fecha</label>
 
-                                              <div class="input-group date">
-                                                  <div class="input-group-addon">
-                                                      <i class="fa fa-calendar"></i>
-                                                  </div>
-                                                  <input required type="text" class="form-control pull-right" name="fecha" id="datepicker"
-                                                         value="">
-                                              </div>
-                                              <!-- /.input group -->
-                                          </div>
-                                      </div>
-
-
-                                  </div>
                               </div>
 
 
