@@ -88,7 +88,7 @@
                               <div class="box-footer">
                                 <div class="row">
                                   <div class="col-md-6">
-                                    <input type="reset" class="btn btn-sm btn-block btn" id="registrar" value="RESTAURAR" style="">
+                                    <input type="reset" class="btn btn-sm btn-block btn" id="restaurar" value="RESTAURAR" style="">
                                   </div>
                                   <div class="col-xs-6">
                                     <input type="submit" class="btn btn-sm btn-block btn-danger" id="registrar" value="MODIFICAR" style="">

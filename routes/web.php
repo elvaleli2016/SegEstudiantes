@@ -35,10 +35,9 @@ Route::post('/eliminar-convenio', ['as' => 'app.convenio.eliminar', 'uses' => 'C
 Route::get('/agregar-docente', ['as' => 'app.docente.agregar', 'uses' => 'DocenteController@getAgregar']);
 Route::post('/agregar-docente', ['as' => 'app.docente.agregar', 'uses' => 'DocenteController@postAgregar']);
 
-Route::get('/editar-docente', ['as' => 'app.docente.editar', 'uses' => 'DocenteController@getEditar']);
+Route::get('/editar-docente/{id}', ['as' => 'app.docente.editar', 'uses' => 'DocenteController@getEditar']);
 Route::post('/editar-docente', ['as' => 'app.docente.editar', 'uses' => 'DocenteController@postEditar']);
 
-Route::get('/eliminar-docente', ['as' => 'app.docente.eliminar', 'uses' => 'DocenteController@getEliminar']);
 Route::post('/eliminar-docente', ['as' => 'app.docente.eliminar', 'uses' => 'DocenteController@postEliminar']);
 
 Route::get('/listar-docente', ['as' => 'app.docente.listar', 'uses' => 'DocenteController@index']);
@@ -52,17 +51,16 @@ Route::post('/editar-empresa', ['as' => 'app.empresa.editar', 'uses' => 'Empresa
 
 Route::get('/listar-empresa', ['as' => 'app.empresa.listar', 'uses' => 'EmpresaController@index']);
 
-Route::get('/eliminar-empresa', ['as' => 'app.empresa.eliminar', 'uses' => 'EmpresaController@getEliminar']);
+Route::get('/eliminar-empresa/{id}', ['as' => 'app.empresa.eliminar', 'uses' => 'EmpresaController@getEliminar']);
 Route::post('/eliminar-empresa', ['as' => 'app.empresa.eliminar', 'uses' => 'EmpresaController@postEliminar']);
 
 /* Estudiantes */
 Route::get('/agregar-estudiante', ['as' => 'app.estudiante.agregar', 'uses' => 'EstudianteController@getAgregar']);
 Route::post('/agregar-estudiante', ['as' => 'app.estudiante.agregar', 'uses' => 'EstudianteController@postAgregar']);
 
-Route::get('/editar-estudiante', ['as' => 'app.estudiante.editar', 'uses' => 'EstudianteController@getEditar']);
+Route::get('/editar-estudiante/{id}', ['as' => 'app.estudiante.editar', 'uses' => 'EstudianteController@getEditar']);
 Route::post('/editar-estudiante', ['as' => 'app.estudiante.editar', 'uses' => 'EstudianteController@postEditar']);
 
-Route::get('/eliminar-estudiante', ['as' => 'app.estudiante.eliminar', 'uses' => 'EstudianteController@getEliminar']);
 Route::post('/eliminar-estudiante', ['as' => 'app.estudiante.eliminar', 'uses' => 'EstudianteController@postEliminar']);
 
 Route::get('/listar-estudiante', ['as' => 'app.estudiante.listar', 'uses' => 'EstudianteController@index']);

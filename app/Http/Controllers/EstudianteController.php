@@ -16,10 +16,14 @@ class EstudianteController extends Controller
 // LISTA
   public function index(){
     $estudiantes=Estudiante::all();
-    foreach ($estudiantes as $d) {
-      $usuario=Usuario::where('id',$d->id)->first();
-      $d['nombre']=$usuario->nombre;
-      $d['apellido']=$usuario->apellido;
+    foreach ($estudiantes as $d => $row) {
+      $usuario=Usuario::where('id',$row->id)->where('estado','=',0)->first();
+      if(count($usuario)>0){
+	      $row['nombre']=$usuario->nombre;
+	      $row['apellido']=$usuario->apellido;
+	  }else{
+        unset($estudiantes[$d]);
+      }
     }
 
     return view($this->direccion."lista",compact("estudiantes"));
@@ -38,15 +42,24 @@ class EstudianteController extends Controller
   }
 
   public function getEditar($id){
-
-    //return view($this->direccion."editar",compact(''));
+    $estudiante=Estudiante::join('usuarios', 'estudiantes.id', '=', 'usuarios.id')->where('estudiantes.id',$id)->select('estudiantes.*', 'usuarios.*')->first();
+    return view($this->direccion."editar",compact('estudiante'));
   }
 
   public function postEditar(Request $request){
-
+    $usuario=Usuario::findOrFail($request->id);
+    $usuario->fill($request->all());
+    $usuario->save();
+    $estudiante=Estudiante::findOrFail($request->id);
+    $estudiante->fill($request->all());
+    $estudiante->save();
+    $estudiante = $request;
+    return view($this->direccion.'editar',["msj"=>"Se modificado correctamente el estudiante ".$request['nombre'] ],compact('estudiante'));
   }
 
-  public function getEliminar($id){
-
+  public function postEliminar(Request $request){
+    $usuario=Usuario::findOrFail($request->id);
+    $usuario->estado = 1;
+    $usuario->save();
   }
 }
