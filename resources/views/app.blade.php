@@ -275,6 +275,12 @@
   <script type="text/javascript" src="/js/ufps.js"></script>
   <script type="text/javascript" src="/js/base.js"></script>
 
+
+  <!-- Datepicker-->
+  <script src="{{URL::asset('plugins/datepicker/bootstrap-datepicker.js')}}"></script>
+  <script src="{{URL::asset('plugins/colorpicker/bootstrap-colorpicker.min.js')}}"></script>
+  <script src="{{URL::asset('plugins/timepicker/bootstrap-timepicker.min.js')}}"></script>
+
   @yield("script")
 
   <!--[if lt IE 9]>
