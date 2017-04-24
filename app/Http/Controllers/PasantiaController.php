@@ -42,7 +42,7 @@ class PasantiaController extends Controller
   }
 
   public function postAgregar(Request $request){
-
+    dd($request->all());
     return view($this->direccion.'agregar',["msj"=>"Se registro correctamente la empresa"]);
   }
 

@@ -27,7 +27,7 @@
               </section>
               <section style="padding : 10px 25px 25px 25px;">
                   <div class="col-md-12">
-                      <form role="form" id="form-empresa" action="agregar-empresa" method="POST" enctype="multipart/form-data">
+                      <form role="form" id="form-convenio" action="agregar-convenio" method="POST" enctype="multipart/form-data" autocomplete="off">
                           <div class="box box-danger">
                               <input name="_token" type="hidden" value="{{ csrf_token() }}">
                               <div class="box-body">
@@ -46,7 +46,7 @@
                                         <div class="form-group">
                                             <label>Empresa</label>
                                             <select requerid class=" selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="empresa" id="empresa" data-live-search="true">
-                                                <option selected></option>
+                                                
                                                 @foreach ($empresas as $dato)
                                                     <option data-tokens="{{$dato->id}}" value="{{$dato->id}}">{{$dato->nombre}}</option>
                                                 @endforeach
@@ -63,13 +63,25 @@
                                       <div class="col-md-6">
                                           <div class="form-group">
                                               <label for="exampleInputPassword1">Palabra clave</label>
-                                              <input type="text" class="form-control" name="palabra_clave"  placeholder="Digita la palabra clave">
+                                              <input type="text" class="form-control" name="palabras_clave"  placeholder="Digita la palabra clave">
                                           </div>
                                       </div>
                                       <div class="col-md-6">
                                           <div class="form-group">
                                               <label for="exampleInputPassword1">Costo</label>
                                               <input type="text" class="form-control" name="costo"  placeholder="Digita la palabra clave">
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label for="exampleInputPassword1">Represntante empresa</label>
+                                              <input type="text" class="form-control" name="representante_emp"  placeholder="Digita la representante empresa">
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label for="exampleInputPassword1">Representante universidad</label>
+                                              <input type="text" class="form-control" name="representante_uni"  placeholder="Digita la prepresentante universidad">
                                           </div>
                                       </div>
                                       <div class="col-md-6">

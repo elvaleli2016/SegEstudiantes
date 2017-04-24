@@ -15,6 +15,10 @@ class ConvenioController extends Controller
   }
   public function index(){
     $convenios=Convenios::orderBy('empresa')->get();
+    foreach($convenios as $d){
+      $empresa=Empresa::where('id',$d->empresa)->first();
+      $d['empresa']=$empresa->nombre;
+    }
     //$convenios=Empresa::all();
     return view($this->direccion."lista",compact("convenios"));
   }
@@ -25,8 +29,11 @@ class ConvenioController extends Controller
   }
 
   public function postAgregar(Request $request){
+    $request['archivo']="dghjhfhjj"; //FALTA SUBIR EL ARCHIVO
+    Convenios::create($request->all());
 
-    return view($this->direccion.'agregar',["msj"=>"Se registro correctamente el convenio"]);
+    $empresas=Empresa::all();
+    return view($this->direccion.'agregar',["msj"=>"Se registro correctamente el convenio"],compact('empresas'));
   }
 
   public function getEditar($id){

@@ -27,7 +27,7 @@
               </section>
               <section style="padding : 10px 25px 25px 25px;">
                   <div class="col-md-12">
-                      <form role="form" id="form-empresa" action="agregar-empresa" method="POST" enctype="multipart/form-data">
+                      <form role="form" id="form-empresa" action="agregar-pasantia" method="POST" enctype="multipart/form-data">
                           <div class="box box-danger">
                               <input name="_token" type="hidden" value="{{ csrf_token() }}">
                               <div class="box-body">
@@ -83,6 +83,34 @@
                                                       <option data-tokens="{{$dato->id}}" value="{{$dato->id}}">{{$dato->nombre}} {{$dato->apellido}}</option>
                                                   @endforeach
                                               </select>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label>Fecha inicio</label>
+
+                                              <div class="input-group date">
+                                                  <div class="input-group-addon">
+                                                      <i class="fa fa-calendar"></i>
+                                                  </div>
+                                                  <input required type="text" class="form-control pull-right" name="fecha_ini" id="datepicker"
+                                                         value="">
+                                              </div>
+                                              <!-- /.input group -->
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label>Fecha fin</label>
+
+                                              <div class="input-group date">
+                                                  <div class="input-group-addon">
+                                                      <i class="fa fa-calendar"></i>
+                                                  </div>
+                                                  <input required type="text" class="form-control pull-right" name="fecha_fin"
+                                                         value="">
+                                              </div>
+                                              <!-- /.input group -->
                                           </div>
                                       </div>
                                   </div>
