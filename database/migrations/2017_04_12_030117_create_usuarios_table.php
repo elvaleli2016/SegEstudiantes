@@ -22,6 +22,7 @@ class CreateUsuariosTable extends Migration
             $table->string('telefono')->nullable();
             $table->string('correo')->nullable();
             $table->string('direccion')->nullable();
+            $table->char('estado',2)->defaul('1');
             $table->timestamps();
         });
     }
