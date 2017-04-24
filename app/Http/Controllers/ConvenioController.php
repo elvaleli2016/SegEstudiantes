@@ -48,4 +48,13 @@ class ConvenioController extends Controller
   public function getEliminar($id){
 
   }
+
+  public function listaEmpresa(Request $request){
+    $id=$request['id'];
+    $convenios=Convenios::where('empresa',$id)->get();
+    return response()->json([
+        "msg"=>"Success",
+        "convenio"=>$convenios
+    ],200);
+  }
 }
