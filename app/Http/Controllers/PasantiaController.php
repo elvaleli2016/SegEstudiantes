@@ -6,8 +6,9 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Pasantia;
 use App\Docente;
+use App\Usuario;
 use App\Estudiante;
-use App\Convenio;
+use App\Convenios;
 use App\Empresa;
 
 class PasantiaController extends Controller
@@ -21,12 +22,11 @@ class PasantiaController extends Controller
   public function index(){
     $pasantias=Pasantia::all();
     foreach ($pasantias as $p) {
-      $convenio=Convenio::where('pasantia',$p->id)->first();
+      $convenio=Convenios::where('id',$p->convenio)->first();
       $est=Usuario::where('id',$p->estudiante)->first();
       $tut=Usuario::where('id',$p->tutor)->first();
       $p['estudiante']=$est->nombre." ".$est->apellido;
       $p['tutor']=$tut->nombre." ".$tut->apellido;
-      $p['fecha']=$convenio->fecha;
       $p['concepto']=$convenio->concepto;
     }
 
@@ -42,8 +42,12 @@ class PasantiaController extends Controller
   }
 
   public function postAgregar(Request $request){
-    dd($request->all());
-    return view($this->direccion.'agregar',["msj"=>"Se registro correctamente la empresa"]);
+    Pasantia::create($request->all());
+
+    $empresas=Empresa::all();
+    $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();
+    $docentes=DB::table('usuarios')->join('docentes','usuarios.id','=','docentes.id')->get();
+    return view($this->direccion.'agregar',["msj"=>"Se registro correctamente la pasantia ".$request['titulo']],compact('estudiantes','docentes','empresas'));
   }
 
   public function getEditar($id){

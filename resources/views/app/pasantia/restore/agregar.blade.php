@@ -27,9 +27,9 @@
               </section>
               <section style="padding : 10px 25px 25px 25px;">
                   <div class="col-md-12">
-                      <form role="form" id="form-empresa" action="agregar-pasantia" method="POST" enctype="multipart/form-data">
+                      <form role="form" id="form-pasantia" action="agregar-pasantia" method="POST" enctype="multipart/form-data">
                           <div class="box box-danger">
-                              <input name="_token" type="hidden" value="{{ csrf_token() }}">
+                              <input name="_token" type="hidden" id="token" value="{{ csrf_token() }}">
                               <div class="box-body">
                                   <div class="row">
                                       <div class="col-md-4">
@@ -47,7 +47,7 @@
                                       <div class="col-md-6">
                                           <div class="form-group">
                                               <label>Empresa</label>
-                                              <select requerid class=" selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="empresa" data-live-search="true">
+                                              <select requerid class=" selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="empresa" id="empresa" data-live-search="true">
                                                 <option selected></option>
                                                   @foreach ($empresas as $dato)
                                                       <option data-tokens="{{$dato->id}}" value="{{$dato->id}}">{{$dato->nombre}}</option>
@@ -58,7 +58,7 @@
                                       <div class="col-md-6">
                                           <div class="form-group">
                                               <label>Convenio</label>
-                                              <select requerid class=" selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="convenio" data-live-search="true">
+                                              <select requerid class=" selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="convenio" id="convenio" data-live-search="true">
 
                                               </select>
                                           </div>

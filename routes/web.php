@@ -33,6 +33,8 @@ Route::post('/eliminar-convenio', ['as' => 'app.convenio.eliminar', 'uses' => 'C
 
 Route::get('/listar-convenio', ['as' => 'app.convenio.agregar', 'uses' => 'ConvenioController@index']);
 
+Route::post('/lista-convenio','ConvenioController@listaEmpresa');
+
 /* Docentes */
 Route::get('/agregar-docente', ['as' => 'app.docente.agregar', 'uses' => 'DocenteController@getAgregar']);
 Route::post('/agregar-docente', ['as' => 'app.docente.agregar', 'uses' => 'DocenteController@postAgregar']);

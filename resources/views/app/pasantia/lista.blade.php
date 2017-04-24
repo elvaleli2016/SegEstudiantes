@@ -48,15 +48,17 @@
                                 <thead>
                                 <tr role="row">
                                     <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending"
-                                        aria-label="Rendering engine: activate to sort column descending" style="width: 105px;">No Convenio</th>
+                                        aria-label="Rendering engine: activate to sort column descending" style="width: 105px;">Titulo</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                         aria-label="Browser: activate to sort column ascending" style="width: 150px;">Nombre estudiante</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
                                         style="width: 131px;">Nombre tutor</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                                        aria-label="CSS grade: activate to sort column ascending" style="width: 100px;">Concepto</th>
+                                        aria-label="CSS grade: activate to sort column ascending" style="width: 100px;">Convenio</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
-                                        style="width: 101px;">Fecha</th>
+                                        style="width: 101px;">Fecha inicio</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
+                                        style="width: 101px;">Fecha fin</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                         aria-label="CSS grade: activate to sort column ascending" style="width: 70px;">Acciones</th>
 
@@ -68,11 +70,12 @@
 
                                     <tr role="row">
                                      <a href="#">
-                                        <td>{{$dato['n_convenio']}}</td>
+                                        <td>{{$dato['titulo']}}</td>
                                         <td>{{$dato['estudiante']}}</td>
                                         <td>{{$dato['tutor']}}</td>
                                         <td>{{$dato['concepto']}}</td>
-                                        <td>{{$dato['fecha']}}</td>
+                                        <td>{{$dato['fecha_ini']}}</td>
+                                        <td>{{$dato['fecha_fin']}}</td>
                                         <td><a href="/editar-pasantia/{{$dato->id}}" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
                                         <a href="/eliminar-pasantia/{{$dato->id}}" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" ><i class="fa fa-times-circle"></i></a>
                                      </a>
