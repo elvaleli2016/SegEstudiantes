@@ -27,9 +27,9 @@
               </section>
               <section style="padding : 10px 25px 25px 25px;">
                   <div class="col-md-12">
-                      <form role="form" id="form-empresa" action="agregar-empresa" method="POST" enctype="multipart/form-data">
+                      <form role="form" id="form-practica" action="agregar-practica" method="POST" enctype="multipart/form-data">
                           <div class="box box-danger">
-                              <input name="_token" type="hidden" value="{{ csrf_token() }}">
+                              <input name="_token" type="hidden" id="token" value="{{ csrf_token() }}">
                               <div class="box-body">
                                   <div class="row">
                                       <div class="col-md-4">
@@ -42,6 +42,25 @@
                                           <div class="form-group">
                                               <label>Descripción</label>
                                               <input required type="text" class="form-control" name="descripcion" placeholder="Digita la descripciÓn" value=''>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label>Empresa</label>
+                                              <select requerid class=" selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="empresa" id="empresa" data-live-search="true">
+                                                <option selected></option>
+                                                  @foreach ($empresas as $dato)
+                                                      <option data-tokens="{{$dato->id}}" value="{{$dato->id}}">{{$dato->nombre}}</option>
+                                                  @endforeach
+                                              </select>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label>Convenio</label>
+                                              <select requerid class=" selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="convenio" id="convenio" data-live-search="true">
+
+                                              </select>
                                           </div>
                                       </div>
                                       <div class="col-md-6">
@@ -66,47 +85,20 @@
                                               </select>
                                           </div>
                                       </div>
-                                  </div>
-                                  <div class="col-xs-12">
-                                      <h1 class="shop-h1" style="font-size: 30px;"><b>Convenio</b></h1>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-md-4">
+                                      <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>No covenio</label>
-                                            <input required type="text" class="form-control" name="n_convenio" placeholder="Numero de convenio" value="">
+                                            <label>Año</label>
+                                            <input required type="number" class="form-control" name="ano" placeholder="Digita el año" value=''>
                                         </div>
-                                    </div>
-                                    <div class="col-xs-12"></div>
-                                      <div class="col-md-6">
-                                          <div class="form-group">
-                                              <label for="exampleInputPassword1">Concepto</label>
-                                              <input type="text" class="form-control" name="concepto"  placeholder="Digita lel concepto">
-                                          </div>
                                       </div>
                                       <div class="col-md-6">
-                                          <div class="form-group">
-                                              <label for="exampleInputPassword1">Palabra clave</label>
-                                              <input type="text" class="form-control" name="palabra_clave"  placeholder="Digita la palabra clave">
-                                          </div>
+                                        <div class="form-group">
+                                            <label>Semestre</label>
+                                            <input required type="number" class="form-control" name="semestre" placeholder="Digita el semestre" value=''>
+                                        </div>
                                       </div>
-                                      <div class="col-md-6">
-                                          <div class="form-group">
-                                              <label>Fecha</label>
-
-                                              <div class="input-group date">
-                                                  <div class="input-group-addon">
-                                                      <i class="fa fa-calendar"></i>
-                                                  </div>
-                                                  <input required type="text" class="form-control pull-right" name="fecha" id="datepicker"
-                                                         value="">
-                                              </div>
-                                              <!-- /.input group -->
-                                          </div>
-                                      </div>
-
-
                                   </div>
+
                               </div>
 
 

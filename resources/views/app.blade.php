@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<!-- Mirrored from ingsistemas.ufps.edu.co/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 12 Apr 2017 02:40:50 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <title>Segimiento estudiantes</title>
     <!-- Meta -->
