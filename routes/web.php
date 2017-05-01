@@ -75,7 +75,7 @@ Route::post('/agregar-pasantia', ['as' => 'app.pasantia.agregar', 'uses' => 'Pas
 
 Route::get('/listar-pasantia', ['as' => 'app.pasantia.listar', 'uses' => 'PasantiaController@index']);
 
-Route::get('/editar-pasantia', ['as' => 'app.pasantia.editar', 'uses' => 'PasantiaController@getEditar']);
+Route::get('/editar-pasantia/{id}', ['as' => 'app.pasantia.editar/{id}', 'uses' => 'PasantiaController@getEditar']);
 Route::post('/editar-pasantia', ['as' => 'app.pasantia.editar', 'uses' => 'PasantiaController@postEditar']);
 
 Route::get('/eliminar-pasantia', ['as' => 'app.pasantia.eliminar', 'uses' => 'PasantiaController@getEliminar']);
@@ -87,7 +87,7 @@ Route::post('/agregar-practica', ['as' => 'app.practica.agregar', 'uses' => 'Pra
 
 Route::get('/listar-practica', ['as' => 'app.practica.listar', 'uses' => 'PracticaController@index']);
 
-Route::get('/editar-practica', ['as' => 'app.practica.editar', 'uses' => 'PracticaController@getEditar']);
+Route::get('/editar-practica/{id}', ['as' => 'app.practica.editar/{id}', 'uses' => 'PracticaController@getEditar']);
 Route::post('/editar-practica', ['as' => 'app.practica.editar', 'uses' => 'PracticaController@postEditar']);
 
 Route::get('/eliminar-practica', ['as' => 'app.practica.eliminar', 'uses' => 'PracticaController@getEliminar']);

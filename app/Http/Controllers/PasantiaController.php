@@ -51,12 +51,27 @@ class PasantiaController extends Controller
   }
 
   public function getEditar($id){
-
-    //return view($this->direccion."editar",compact(''));
+    $pasantia=Pasantia::findOrFail($id);
+    $empresas=Empresa::all();
+    $convenio=Convenios::findOrFail($pasantia->convenio);
+    $pasantia['empresa']=$convenio->empresa;
+    $convenios=Convenios::where('empresa',$convenio->empresa)->get();
+    $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();
+    $docentes=DB::table('usuarios')->join('docentes','usuarios.id','=','docentes.id')->get();
+    return view($this->direccion.'editar',compact('estudiantes','docentes','empresas','pasantia','convenios'));
   }
 
   public function postEditar(Request $request){
-
+    $pasantia=Pasantia::findOrFail($request->id);
+    $pasantia->titulo=$request->titulo;
+    $pasantia->descripcion=$request->descripcion;
+    $pasantia->convenio=$request->convenio;
+    $pasantia->estudiante=$request->estudiante;
+    $pasantia->tutor=$request->tutor;
+    $pasantia->fecha_ini=$request->fecha_ini;
+    $pasantia->fecha_fin=$request->fecha_fin;
+    $pasantia->update();
+    return redirect()->back()->withErrors('FUE ACTIALIZADO CON EXITO..');
   }
 
   public function getEliminar($id){

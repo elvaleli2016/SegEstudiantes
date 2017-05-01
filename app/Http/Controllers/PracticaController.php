@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Practica;
 use App\Docente;
+use App\Usuario;
 use App\Estudiante;
 use App\Convenios;
 use App\Empresa;
@@ -50,12 +51,27 @@ class PracticaController extends Controller
 }
 
   public function getEditar($id){
-
-    //return view($this->direccion."editar",compact(''));
+    $practica=Practica::findOrFail($id);
+    $empresas=Empresa::all();
+    $convenio=Convenios::findOrFail($practica->convenio);
+    $ractica['empresa']=$convenio->empresa;
+    $convenios=Convenios::where('empresa',$convenio->empresa)->get();
+    $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();
+    $docentes=DB::table('usuarios')->join('docentes','usuarios.id','=','docentes.id')->get();
+    return view($this->direccion.'editar',compact('estudiantes','docentes','empresas','practica','convenios'));
   }
 
   public function postEditar(Request $request){
-
+    $practica=Practica::findOrFail($request->id);
+    $practica->titulo=$request->titulo;
+    $practica->descripcion=$request->descripcion;
+    $practica->convenio=$request->convenio;
+    $practica->estudiante=$request->estudiante;
+    $practica->tutor=$request->tutor;
+    $practica->ano=$request->ano;
+    $practica->semestre=$request->semestre;
+    $practica->update();
+    return redirect()->back()->withErrors('FUE ACTIALIZADO CON EXITO..');
   }
 
   public function getEliminar($id){
