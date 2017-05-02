@@ -33,9 +33,20 @@ class ConvenioController extends Controller
     Convenios::create($request->all());
 
     $empresas=Empresa::all();
+    $photoName = time().'.'.$request->file->getClientOriginalExtension();
+    $request->file->move(public_path('uploads'), $photoName);
     return view($this->direccion.'agregar',["msj"=>"Se registro correctamente el convenio"],compact('empresas'));
   }
 
+
+  public function listaEmpresa(Request $request){
+    $id=$request['id'];
+    $convenios=Convenios::where('empresa',$id)->get();
+    return response()->json([
+        "msg"=>"Success",
+        "convenio"=>$convenios
+    ],200);
+  }
   public function getEditar($id){
 
     //return view($this->direccion."editar",compact(''));
@@ -47,14 +58,5 @@ class ConvenioController extends Controller
 
   public function getEliminar($id){
 
-  }
-
-  public function listaEmpresa(Request $request){
-    $id=$request['id'];
-    $convenios=Convenios::where('empresa',$id)->get();
-    return response()->json([
-        "msg"=>"Success",
-        "convenio"=>$convenios
-    ],200);
   }
 }

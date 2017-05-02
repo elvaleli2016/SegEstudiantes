@@ -115,7 +115,7 @@
                                       <div class="col-md-6">
                                         <label>Archivo</label>
                                         <div class="form-group">
-                                          <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any">
+                                          <input id="file-1" type="file" name="file" accept="image/png, image/jpeg, application/pdf, application/msword" class="file" multiple=true data-preview-file-type="any">
                                         </div>
                                       </div>
 

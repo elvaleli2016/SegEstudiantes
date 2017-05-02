@@ -45,6 +45,8 @@
     <link type="text/css" rel="stylesheet" href="/css/custom.min.css">
     <link type="text/css" rel="stylesheet" href="/css/pgwslider.min.css">
     <link type="text/css" rel="stylesheet" href="/css/ufps.css">
+    <link type="text/css" rel="stylesheet" href="/plugins/datatables/dataTables.bootstrap.css">
+    dataTables.bootstrap.css
 
     @yield("style")
   </head>
@@ -280,8 +282,17 @@
   <script src="{{URL::asset('plugins/colorpicker/bootstrap-colorpicker.min.js')}}"></script>
   <script src="{{URL::asset('plugins/timepicker/bootstrap-timepicker.min.js')}}"></script>
 
+<!-- DataTables -->
+<script src="{{URL::asset('plugins/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{URL::asset('plugins/datatables/dataTables.bootstrap.min.js')}}"></script>
+
   @yield("script")
 
+<script>
+  $(function () {
+    $("#example1").DataTable();
+  });
+</script>
   <!--[if lt IE 9]>
     <script src="js/respond.js"></script>
     <script src="js/html5shiv.js"></script>
