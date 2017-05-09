@@ -46,7 +46,8 @@
     <link type="text/css" rel="stylesheet" href="/css/pgwslider.min.css">
     <link type="text/css" rel="stylesheet" href="/css/ufps.css">
     <link type="text/css" rel="stylesheet" href="/plugins/datatables/dataTables.bootstrap.css">
-    dataTables.bootstrap.css
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/plugins/bootstrap-select/bootstrap-select.min.css">
 
     @yield("style")
   </head>
@@ -275,6 +276,12 @@
   <script type="text/javascript" src="/js/wow.min.js"></script>
   <script type="text/javascript" src="/js/ufps.js"></script>
   <script type="text/javascript" src="/js/base.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+
+  <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+  <script src="/plugins/bootstrap-select/i18n/defaults-es_ES.min.js"></script>
 
 
   <!-- Datepicker-->

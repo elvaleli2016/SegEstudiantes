@@ -58,7 +58,7 @@
                                       <div class="col-md-6">
                                           <div class="form-group">
                                               <label>Convenio</label>
-                                              <select requerid class=" selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="convenio" id="convenio" data-live-search="true">
+                                              <select requerid class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="convenio" id="convenio" >
 
                                               </select>
                                           </div>
