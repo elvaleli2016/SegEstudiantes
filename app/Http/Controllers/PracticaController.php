@@ -42,7 +42,17 @@ class PracticaController extends Controller
   }
 
   public function postAgregar(Request $request){
-    Practica::create($request->all());
+    $e=$request->estudiante;
+    foreach ($e as $estudiante) {
+        Practica::insert(
+          array('titulo' => $request->titulo,
+                'descripcion' => $request->descripcion,
+                'estudiante' => $estudiante,
+                'tutor' => $request->tutor,
+                'fecha_ini' => $request->fecha_ini,
+                'fecha_fin' => $request->fecha_fin)
+          );
+    }
 
     $empresas=Empresa::all();
     $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();

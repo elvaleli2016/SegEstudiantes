@@ -35,6 +35,7 @@ class PasantiaController extends Controller
 
   public function getAgregar()
   {
+
     $empresas=Empresa::all();
     $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();
     $docentes=DB::table('usuarios')->join('docentes','usuarios.id','=','docentes.id')->get();
@@ -42,7 +43,19 @@ class PasantiaController extends Controller
   }
 
   public function postAgregar(Request $request){
-    Pasantia::create($request->all());
+    
+    $e=$request->estudiante;
+    foreach ($e as $estudiante) {
+        Pasantia::insert(
+          array('titulo' => $request->titulo,
+                'descripcion' => $request->descripcion,
+                'estudiante' => $estudiante,
+                'convenio' => $request->convenio,
+                'tutor' => $request->tutor,
+                'fecha_ini' => $request->fecha_ini,
+                'fecha_fin' => $request->fecha_fin)
+          );
+    }
 
     $empresas=Empresa::all();
     $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();
