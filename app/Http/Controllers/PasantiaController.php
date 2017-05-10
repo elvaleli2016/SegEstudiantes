@@ -43,7 +43,7 @@ class PasantiaController extends Controller
   }
 
   public function postAgregar(Request $request){
-    
+
     $e=$request->estudiante;
     foreach ($e as $estudiante) {
         Pasantia::insert(

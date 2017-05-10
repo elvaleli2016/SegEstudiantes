@@ -49,6 +49,9 @@ class PracticaController extends Controller
                 'descripcion' => $request->descripcion,
                 'estudiante' => $estudiante,
                 'tutor' => $request->tutor,
+                'convenio' => $request->convenio,
+                'ano' => $request->ano,
+                'semestre' => $request->semestre,
                 'fecha_ini' => $request->fecha_ini,
                 'fecha_fin' => $request->fecha_fin)
           );
