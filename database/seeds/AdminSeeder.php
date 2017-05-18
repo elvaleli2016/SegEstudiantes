@@ -16,7 +16,8 @@ class AdminSeeder extends Seeder
           'nombre'=>'Pilar',
           'apellido'=>"Rodrigez",
           'tipo_identificacion'=>'cedula',
-          'identificacion'=>'11111111'
+          'identificacion'=>'11111111',
+          'estado'=>'0'
         ]);
 
         DB::table('administradores')->insert([
@@ -29,7 +30,8 @@ class AdminSeeder extends Seeder
           'nombre'=>'Doctor',
           'apellido'=>"Tor",
           'tipo_identificacion'=>'cedula',
-          'identificacion'=>'11111112'
+          'identificacion'=>'11111112',
+          'estado'=>'0'
         ]);
 
         DB::table('docentes')->insert([
@@ -43,7 +45,8 @@ class AdminSeeder extends Seeder
           'nombre'=>'Eliam',
           'apellido'=>'Zapata',
           'tipo_identificacion'=>'cedula',
-          'identificacion'=>'11111113'
+          'identificacion'=>'11111113',
+          'estado'=>'0'
         ]);
 
         DB::table('estudiantes')->insert([

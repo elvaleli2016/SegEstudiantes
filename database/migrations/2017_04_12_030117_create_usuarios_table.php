@@ -18,7 +18,7 @@ class CreateUsuariosTable extends Migration
             $table->string('nombre');
             $table->string('apellido');
             $table->enum('tipo_identificacion',['cedula','estranjera','tarjeta']);
-            $table->string('identificacion')->unique();
+            $table->string('identificacion');//->unique();
             $table->string('telefono')->nullable();
             $table->string('correo')->nullable();
             $table->string('direccion')->nullable();
