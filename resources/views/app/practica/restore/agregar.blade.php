@@ -66,7 +66,7 @@
                                       <div class="col-md-6">
                                           <div class="form-group">
                                               <label>Estudiante</label>
-                                              <select class="js-example-basic-multiple" name="estudiante" data-placeholder="Seleccione un estudiante" multiple="multiple" style="width: 100%;" >
+                                              <select class="js-example-basic-multiple" name="estudiante[]" data-placeholder="Seleccione un estudiante" multiple="multiple" style="width: 100%;" >
                                                   @foreach ($estudiantes as $dato)
                                                       <option data-tokens="{{$dato->id}}" value="{{$dato->id}}">{{$dato->nombre}} {{$dato->apellido}}</option>
                                                   @endforeach

@@ -35,6 +35,7 @@ class DocenteController extends Controller
   }
 
   public function postAgregar(Request $request){
+    $request['estado'] = 0;
     $usuario = Usuario::create($request->all());
     $request['id'] = $usuario->id;
     $docente = Docente::create($request->all());
