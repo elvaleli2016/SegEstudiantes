@@ -16,6 +16,11 @@ class SesionController extends Controller
       return view("login");
     }
 
+    public function salir(){
+        Session::flush();
+        return redirect("/");
+    }
+
     public function validar(Request $request){
       $user=null;
       if($request['tipo_cuenta']=="administrador"){

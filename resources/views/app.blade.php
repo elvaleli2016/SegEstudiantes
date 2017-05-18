@@ -80,7 +80,10 @@
                   <ul class="topbar-list topbar-log_reg pull-right visible-sm-block visible-md-block visible-lg-block">
 
                     <li class="cd-log_reg home">
-                      <a href="#">{{session('usuario')['tipo']}} : {{session('usuario')['nombre']}}</a>
+                      {{session('usuario')['tipo']}} : {{session('usuario')['nombre']}}
+                    </li>
+                    <li class="cd-log_reg home">
+                      <a href="/salir">Salir</a>
                     </li>
                   </ul>
                 </div>
@@ -125,14 +128,15 @@
         <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
           <div class="containermenu">
 <ul class="nav navbar-nav" style="float:left;">
-
-  <li class="dropdown">
-    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Docentes</a>
-    <ul class="dropdown-menu">
-      <li><a href="/agregar-docente">Registrar </a></li>
-      <li><a href="/listar-docente">Listar</a></li>
-    </ul>
-  </li>
+  @if(session('usuario')['tipo']=='administrador')
+    <li class="dropdown">
+      <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Docentes</a>
+      <ul class="dropdown-menu">
+        <li><a href="/agregar-docente">Registrar </a></li>
+        <li><a href="/listar-docente">Listar</a></li>
+      </ul>
+    </li>
+  @endif
 
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Estudiantes</a>
@@ -141,6 +145,7 @@
       <li><a href="/listar-estudiante">Listar</a></li>
     </ul>
   </li>
+  @if(session('usuario')['tipo']=='administrador')
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Empresas</a>
     <ul class="dropdown-menu">
@@ -148,6 +153,7 @@
       <li><a href="/listar-empresa">Listar</a></li>
     </ul>
   </li>
+
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Convenios</a>
     <ul class="dropdown-menu">
@@ -155,7 +161,7 @@
       <li><a href="/listar-convenio">Listar</a></li>
     </ul>
   </li>
-
+  @endif
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Pasantias</a>
     <ul class="dropdown-menu">
