@@ -3,7 +3,7 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
-    <?php echo $__env->make('app.convenio.restore.agregar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php echo $__env->make('app.practica.restore.entrega', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('script'); ?>
@@ -13,18 +13,13 @@
 
       var currentDate = new Date();
 
-    $("#fecha_ini").datepicker({
+    $("#fecha_dia").datepicker({
         format: 'yyyy-mm-dd',
         maxDate: 0,
         changeYear: true 
     }).attr('readonly', 'readonly');
-    $("#fecha_ini").datepicker("setDate", currentDate);
-    $("#fecha_fin").datepicker({
-        format: 'yyyy-mm-dd',
-        maxDate: 0,
-        changeYear: true 
-    }).attr('readonly', 'readonly');
-    $("#fecha_fin").datepicker("setDate", currentDate);
+    $("#fecha_dia").datepicker("setDate", currentDate);
+    
 });
   
 

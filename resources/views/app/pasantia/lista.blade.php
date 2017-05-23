@@ -77,6 +77,7 @@
                                         <td>{{$dato['fecha_ini']}}</td>
                                         <td>{{$dato['fecha_fin']}}</td>
                                         <td><a href="/editar-pasantia/{{$dato->id}}" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
+                                        <a href="/entrega-pasantia/{{$dato->id}}" class="btn btn-success  btn-sm" data-original-title="Entrega" data-toggle="tooltip" ><i class="fa fa-plus"></i></a>
                                         <a href="/eliminar-pasantia/{{$dato->id}}" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" ><i class="fa fa-times-circle"></i></a>
                                      </a>
                                     </tr>

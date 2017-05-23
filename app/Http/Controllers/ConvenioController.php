@@ -29,12 +29,15 @@ class ConvenioController extends Controller
   }
 
   public function postAgregar(Request $request){
-    $request['archivo']="dghjhfhjj"; //FALTA SUBIR EL ARCHIVO
+  	
+
+    $fileName = time().'.'.$request->file->getClientOriginalExtension();
+    $request->file->move(public_path('uploads'), $fileName);
+
+    $request['archivo']=$fileName;
     Convenios::create($request->all());
 
     $empresas=Empresa::all();
-    $photoName = time().'.'.$request->file->getClientOriginalExtension();
-    $request->file->move(public_path('uploads'), $photoName);
     return view($this->direccion.'agregar',["msj"=>"Se registro correctamente el convenio"],compact('empresas'));
   }
 

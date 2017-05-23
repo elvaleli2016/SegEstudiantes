@@ -93,7 +93,7 @@
                                                   <div class="input-group-addon">
                                                       <i class="fa fa-calendar"></i>
                                                   </div>
-                                                  <input required type="text" class="form-control pull-right" name="fecha_ini" id="datepicker"
+                                                  <input required type="text" class="form-control pull-right" name="fecha_ini" id="fecha_ini"
                                                          value="">
                                               </div>
                                               <!-- /.input group -->
@@ -107,7 +107,7 @@
                                                   <div class="input-group-addon">
                                                       <i class="fa fa-calendar"></i>
                                                   </div>
-                                                  <input required type="text" class="form-control pull-right" name="fecha_fin"
+                                                  <input required type="text" class="form-control pull-right" name="fecha_fin" id="fecha_fin"
                                                          value="">
                                               </div>
                                               <!-- /.input group -->

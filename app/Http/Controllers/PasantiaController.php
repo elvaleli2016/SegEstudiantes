@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Pasantia;
+use App\Periodo;
 use App\Docente;
 use App\Usuario;
 use App\Estudiante;
@@ -42,6 +43,12 @@ class PasantiaController extends Controller
     return view($this->direccion.'agregar',compact('estudiantes','docentes','empresas'));
   }
 
+
+
+// [5:59, 18/4/2017] Eliam: git init                        
+// [5:59, 18/4/2017] Eliam: git add -A                        
+// [6:00, 18/4/2017] Eliam: git commit -m "lo que se hizo"                        
+// [6:00, 18/4/2017] Eliam: git push
   public function postAgregar(Request $request){
 
     $e=$request->estudiante;
@@ -90,4 +97,32 @@ class PasantiaController extends Controller
   public function getEliminar($id){
 
   }
+
+  public function getEntrega($id){
+    $pasantia=Pasantia::findOrFail($id);
+    $empresas=Empresa::all();
+    $convenio=Convenios::findOrFail($pasantia->convenio);
+    $pasantia['empresa']=$convenio->empresa;
+    $convenios=Convenios::where('empresa',$convenio->empresa)->get();
+    $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();
+    $docentes=DB::table('usuarios')->join('docentes','usuarios.id','=','docentes.id')->get();
+    return view($this->direccion.'entrega',compact('estudiantes','docentes','empresas','pasantia','convenio'));
+  }
+
+  public function postEntrega(Request $request){
+    $fileName = time().'.'.$request->file->getClientOriginalExtension();
+    $request->file->move(public_path('uploads'), $fileName);
+
+    $request['archivo']=$fileName;
+    $periodo = Periodo::create($request->all());
+    $pasantia=Pasantia::findOrFail($request->pasantia);
+    $empresas=Empresa::all();
+    $convenio=Convenios::findOrFail($pasantia->convenio);
+    $pasantia['empresa']=$convenio->empresa;
+    $convenios=Convenios::where('empresa',$convenio->empresa)->get();
+    $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();
+    $docentes=DB::table('usuarios')->join('docentes','usuarios.id','=','docentes.id')->get();
+    return view($this->direccion.'entrega',["msj"=>"Se registro correctamente la entrega "],compact('estudiantes','docentes','empresas','pasantia','convenio','periodo'));
+  }
+
 }

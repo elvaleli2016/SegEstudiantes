@@ -33,16 +33,26 @@ $('#empresa').change(function(){
 
   });
 });
-$('body').on('focus', "input[name='fecha_ini']", function () {
-    $(this).datepicker({
-        autoclose: true
-    });
+
+ $(function(){
+
+
+      var currentDate = new Date();
+
+    $("#fecha_ini").datepicker({
+        format: 'yyyy-mm-dd',
+        maxDate: 0,
+        changeYear: true 
+    }).attr('readonly', 'readonly');
+    $("#fecha_ini").datepicker("setDate", currentDate);
+    $("#fecha_fin").datepicker({
+        format: 'yyyy-mm-dd',
+        maxDate: 0,
+        changeYear: true 
+    }).attr('readonly', 'readonly');
+    $("#fecha_fin").datepicker("setDate", currentDate);
 });
-$('body').on('focus', "input[name='fecha_fin']", function () {
-    $(this).datepicker({
-        autoclose: true
-    });
-});
+
 </script>
 <script type="text/javascript">
 $(".js-example-basic-multiple").select2();
