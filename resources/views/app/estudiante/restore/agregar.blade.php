@@ -50,7 +50,7 @@
                                             <label for="apellidos">Tipo de Identificacion:</label>
                                             <select class=" selectpicker form-control" name="tipo_identificacion" >
                                               <option value="cedula">Cedula</option>
-                                              <option value="tidentidad">Tarjeta de Identidad</option>
+                                              <option value="tarjeta">Tarjeta de Identidad</option>
                                             </select>
                                           </div>
                                       </div>

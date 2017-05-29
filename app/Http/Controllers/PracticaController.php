@@ -95,7 +95,12 @@ class PracticaController extends Controller
   }
 
   public function getEliminar($id){
-
+    $pasantia=Practica::findOrFail($id);
+    $periodos=Periodo::where('practica','=',$id)->get();
+    if($periodos->count()!=0)
+      $periodos->delete();
+    $pasantia->delete();
+    return redirect()->back()->withErrors('LA PRACTICA FUE ELIMINADO..');
   }
 
   public function getEntrega($id){

@@ -80,7 +80,7 @@
                                           <a style="color:#FFF" title="Editar" href="/editar-pasantia/<?php echo e($dato->id); ?>" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
                                           <a style="color:#FFF" title="Agregar entrega" href="/entrega-pasantia/<?php echo e($dato->id); ?>" class="btn btn-success  btn-sm" data-original-title="Entrega" data-toggle="tooltip" ><i class="fa fa-plus"></i></a>
                                         <?php if(session('usuario')['tipo']!="docente"): ?>
-                                          <a style="color:#FFF" title="Eliminar" href="/eliminar-pasantia/<?php echo e($dato->id); ?>" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" ><i class="fa fa-times-circle"></i></a>
+                                          <a style="color:#FFF" title="Eliminar" href="/eliminar-pasantia/<?php echo e($dato->id); ?>" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" onclick="return confirm('Seguro desea eliminar la pasantia')"><i class="fa fa-times-circle"></i></a>
                                         <?php endif; ?>
                                     </tr>
 

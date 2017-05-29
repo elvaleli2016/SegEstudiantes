@@ -99,7 +99,12 @@ class PasantiaController extends Controller
   }
 
   public function getEliminar($id){
-
+    $pasantia=Pasantia::findOrFail($id);
+    $periodos=Periodo::where('pasantia','=',$id)->get(); 
+    if($periodos->count()!=0)
+      $periodos->delete();
+    $pasantia->delete();
+    return redirect()->back()->withErrors('LA PASANTIA FUE ELIMINADO..');
   }
 
   public function getEntrega($id){
