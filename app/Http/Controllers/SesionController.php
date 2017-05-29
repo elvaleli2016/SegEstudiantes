@@ -20,7 +20,15 @@ class SesionController extends Controller
         Session::flush();
         return redirect("/");
     }
+    public function getValidar(){
+      if(isset(session('usuario')['tipo'])){
+        if(session('usuario')['tipo']=="docente")
+          return redirect('/listar-practica');
+        return redirect('/listar-empresa');
+      }
+      return redirect("/");
 
+    }
     public function validar(Request $request){
       $user=null;
       if($request['tipo_cuenta']=="administrador"){
@@ -47,8 +55,11 @@ class SesionController extends Controller
       $user['identificacion']=$usuario->identificacion;
       $user['telefono']=$usuario->telefono;
       $user['tipo']=$request['tipo_cuenta'];
+
       Session::put('usuario',$user->toArray());
-      $empresas=Empresa::all();
-      return view("app/empresa/lista",compact("empresas"));
+      return $this->getValidar();
+
+      //$empresas=Empresa::all();
+      //return view("app/empresa/lista",compact("empresas"));
     }
 }

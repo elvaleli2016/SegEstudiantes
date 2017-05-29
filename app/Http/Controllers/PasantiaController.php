@@ -11,7 +11,6 @@ use App\Usuario;
 use App\Estudiante;
 use App\Convenios;
 use App\Empresa;
-
 class PasantiaController extends Controller
 {
   public $direccion;
@@ -82,7 +81,8 @@ class PasantiaController extends Controller
     $convenios=Convenios::where('empresa',$convenio->empresa)->get();
     $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();
     $docentes=DB::table('usuarios')->join('docentes','usuarios.id','=','docentes.id')->get();
-    return view($this->direccion.'editar',compact('estudiantes','docentes','empresas','pasantia','convenios'));
+    $periodos=Periodo::where('pasantia','=',$id)->get();
+    return view($this->direccion.'editar',compact('estudiantes','docentes','empresas','pasantia','convenios','periodos'));
   }
 
   public function postEditar(Request $request){

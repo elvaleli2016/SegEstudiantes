@@ -77,7 +77,8 @@ class PracticaController extends Controller
     $convenios=Convenios::where('empresa',$convenio->empresa)->get();
     $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();
     $docentes=DB::table('usuarios')->join('docentes','usuarios.id','=','docentes.id')->get();
-    return view($this->direccion.'editar',compact('estudiantes','docentes','empresas','practica','convenios'));
+    $periodos=Periodo::where('practica','=',$id)->get();
+    return view($this->direccion.'editar',compact('estudiantes','docentes','empresas','practica','convenios','practica'));
   }
 
   public function postEditar(Request $request){

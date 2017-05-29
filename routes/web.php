@@ -18,6 +18,7 @@ Route::get('/', function () {
 //SESIONES
 
 Route::get('/','SesionController@index');
+Route::get("/inicio",'SesionController@getValidar');
 Route::post("/inicio",'SesionController@validar');
 Route::get("/salir","SesionController@salir");
 
