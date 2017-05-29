@@ -68,12 +68,7 @@
                      <li><a href="https://ww2.ufps.edu.co/universidad/perfiles/estudiantes/953" target="_blank"><i class="fa fa-user"></i>Estudiantes</a></li>
                      <li><a href="https://ww2.ufps.edu.co/universidad/perfiles/egresados/954" target="_blank"><i class="fa fa-graduation-cap"></i>Graduados</a></li>
                      <li><a href="https://docentes.ufps.edu.co/" target="_blank"><i class="fa fa-user-circle"></i>Docentes</a></li>
-                     <li class="cd-log_reg hidden-sm hidden-md hidden-lg"><strong><a class="cd-signup" href="javascript:void(0);">Lenguaje</a></strong>
-                        <ul class="topbar-dropdown">
-                          <li><a href="#">Inglés</a></li>
-                          <li><a href="#">Español</a></li>
-                        </ul>
-                      </li>
+                     
                    </ul>
                 </div>
                 <div class="col-sm-5 col-xs-5 clearfix">

@@ -73,8 +73,8 @@
                                         <td>{{$dato->representante}}</td>
                                         <td>{{$dato->ciudad}}</td>
                                         <td>{{$dato->direccion}}</td>
-                                        <td><a href="/editar-empresa/{{$dato->id}}" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
-                                        <a href="/eliminar-empresa/{{$dato->id}}" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" ><i class="fa fa-times-circle"></i></a>
+                                        <td><a style="color:#FFF" title="Editar" href="/editar-empresa/{{$dato->id}}" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
+                                        <a style="color:#FFF" title="Eliminar" href="/eliminar-empresa/{{$dato->id}}" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" ><i class="fa fa-times-circle"></i></a>
                                      </a>
                                     </tr>
 

@@ -21,7 +21,11 @@ class PasantiaController extends Controller
   }
 // LISTA
   public function index(){
-    $pasantias=Pasantia::all();
+    if(session('usuario')['tipo']=="docente"){
+      $pasantias=Pasantia::join('usuarios','pasantias.tutor','=','usuarios.id')
+                ->where('usuarios.identificacion','=',session('usuario')['identificacion'])->get();
+    }else
+      $pasantias=Pasantia::all();
     foreach ($pasantias as $p) {
       $convenio=Convenios::where('id',$p->convenio)->first();
       $est=Usuario::where('id',$p->estudiante)->first();
@@ -45,9 +49,9 @@ class PasantiaController extends Controller
 
 
 
-// [5:59, 18/4/2017] Eliam: git init                        
-// [5:59, 18/4/2017] Eliam: git add -A                        
-// [6:00, 18/4/2017] Eliam: git commit -m "lo que se hizo"                        
+// [5:59, 18/4/2017] Eliam: git init
+// [5:59, 18/4/2017] Eliam: git add -A
+// [6:00, 18/4/2017] Eliam: git commit -m "lo que se hizo"
 // [6:00, 18/4/2017] Eliam: git push
   public function postAgregar(Request $request){
 

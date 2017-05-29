@@ -79,8 +79,8 @@
                                         <td>{{$dato['fecha_ini']}}</td>
                                         <td>{{$dato['fecha_fin']}}</td>
                                         <td>{{$dato['archivo']}}</td>
-                                        <td><a href="/editar-convenio/{{$dato->id}}" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
-                                        <a href="/eliminar-convenio/{{$dato->id}}" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" ><i class="fa fa-times-circle"></i></a>
+                                        <td><a style="color:#FFF" title="Editar" href="/editar-convenio/{{$dato->id}}" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
+                                        <astyle="color:#FFF" title="Eliminar" href="/eliminar-convenio/{{$dato->id}}" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" ><i class="fa fa-times-circle"></i></a>
                                      </a>
                                     </tr>
 

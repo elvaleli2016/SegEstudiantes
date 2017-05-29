@@ -63,8 +63,8 @@
                                         <td><?php echo e($dato['nombre']); ?></td>
                                         <td><?php echo e($dato['apellido']); ?></td>
                                         <td><?php echo e($dato['codigo']); ?></td>
-                                        <td><a href="/editar-estudiante/<?php echo e($dato->id); ?>" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
-                                        <button id="eliminar-estudiante" data-original-title="Eliminar" data-id="<?php echo e($dato->id); ?>" data-toggle="tooltip" class="btn btn-danger btn-sm"> <i class="fa fa-times-circle"></i></button>
+                                        <td><a style="color:#FFF" title="Editar" href="/editar-estudiante/<?php echo e($dato->id); ?>" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
+                                        <button style="color:#FFF" title="Eliminar" id="eliminar-estudiante" data-original-title="Eliminar" data-id="<?php echo e($dato->id); ?>" data-toggle="tooltip" class="btn btn-danger btn-sm"> <i class="fa fa-times-circle"></i></button>
                                      </a>
                                     </tr>
 

@@ -21,7 +21,12 @@ class PracticaController extends Controller
   }
 
   public function index(){
-    $practicas=Practica::all();
+    if(session('usuario')['tipo']=="docente"){
+      $practicas=Practica::join('usuarios','practicas.tutor','=','usuarios.id')
+                ->where('usuarios.identificacion','=',session('usuario')['identificacion'])->get();
+    }else
+      $practicas=Practica::all();
+
     foreach ($practicas as $p) {
       $convenio=Convenios::where('id',$p->convenio)->first();
       $est=Usuario::where('id',$p->estudiante)->first();
