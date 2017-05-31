@@ -171,6 +171,9 @@
       <li><a href="/listar-practica">Listar</a></li>
     </ul>
   </li>
+  <li class="nodropdown">
+    <a href="/estadisticas" class="dropdown-toggle disabled" data-toggle="dropdown" target="_blank">Estadisticas</a>
+  </li>
 
 
   <li class="nodropdown">

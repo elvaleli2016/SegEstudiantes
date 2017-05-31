@@ -98,3 +98,6 @@ Route::get('/entrega-practica/{id}', ['as' => 'app.practica.entrega/{id}', 'uses
 Route::post('/entrega-practica', ['as' => 'app.practica.entrega', 'uses' => 'PracticaController@postEntrega']);
 
 Route::get('/eliminar-practica/{id}', ['as' => 'app.practica.eliminar', 'uses' => 'PracticaController@getEliminar']);
+
+
+Route::get('/estadisticas', ['as' => 'app.estadisticas.index', 'uses' => 'EstadisticasController@index']);
