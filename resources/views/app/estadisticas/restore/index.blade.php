@@ -117,7 +117,11 @@
               </div>
             </div>
             <div class="box-body">
-              <canvas id="pieChart" style="height:250px"></canvas>
+              <div  style="width: 100%;">
+                  <canvas id="pie-chart-area" width="400" height="400"/>
+              </div>
+
+              <div id="legend"></div>
             </div>
             <div id="legend"></div>
             <!-- /.box-body -->
