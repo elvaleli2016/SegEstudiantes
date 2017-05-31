@@ -75,7 +75,7 @@
                   <ul class="topbar-list topbar-log_reg pull-right visible-sm-block visible-md-block visible-lg-block">
 
                     <li class="cd-log_reg home">
-                      {{session('usuario')['tipo']}} : {{session('usuario')['nombre']}}
+                      {{session('usuario')['tipo']}} : {{session('usuario')['nombre']}} 
                     </li>
                     <li class="cd-log_reg home">
                       <a href="/salir">Salir</a>

@@ -68,19 +68,17 @@
                      <li><a href="https://ww2.ufps.edu.co/universidad/perfiles/estudiantes/953" target="_blank"><i class="fa fa-user"></i>Estudiantes</a></li>
                      <li><a href="https://ww2.ufps.edu.co/universidad/perfiles/egresados/954" target="_blank"><i class="fa fa-graduation-cap"></i>Graduados</a></li>
                      <li><a href="https://docentes.ufps.edu.co/" target="_blank"><i class="fa fa-user-circle"></i>Docentes</a></li>
-                     <li class="cd-log_reg hidden-sm hidden-md hidden-lg"><strong><a class="cd-signup" href="javascript:void(0);">Lenguaje</a></strong>
-                        <ul class="topbar-dropdown">
-                          <li><a href="#">Inglés</a></li>
-                          <li><a href="#">Español</a></li>
-                        </ul>
-                      </li>
+                     
                    </ul>
                 </div>
                 <div class="col-sm-5 col-xs-5 clearfix">
                   <ul class="topbar-list topbar-log_reg pull-right visible-sm-block visible-md-block visible-lg-block">
 
                     <li class="cd-log_reg home">
-                      <a href="#"><?php echo e(session('usuario')['tipo']); ?> : <?php echo e(session('usuario')['nombre']); ?></a>
+                      <?php echo e(session('usuario')['tipo']); ?> : <?php echo e(session('usuario')['nombre']); ?> 
+                    </li>
+                    <li class="cd-log_reg home">
+                      <a href="/salir">Salir</a>
                     </li>
                   </ul>
                 </div>
@@ -125,14 +123,15 @@
         <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
           <div class="containermenu">
 <ul class="nav navbar-nav" style="float:left;">
-
-  <li class="dropdown">
-    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Docentes</a>
-    <ul class="dropdown-menu">
-      <li><a href="/agregar-docente">Registrar </a></li>
-      <li><a href="/listar-docente">Listar</a></li>
-    </ul>
-  </li>
+  <?php if(session('usuario')['tipo']=='administrador'): ?>
+    <li class="dropdown">
+      <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Docentes</a>
+      <ul class="dropdown-menu">
+        <li><a href="/agregar-docente">Registrar </a></li>
+        <li><a href="/listar-docente">Listar</a></li>
+      </ul>
+    </li>
+  <?php endif; ?>
 
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Estudiantes</a>
@@ -141,6 +140,7 @@
       <li><a href="/listar-estudiante">Listar</a></li>
     </ul>
   </li>
+  <?php if(session('usuario')['tipo']=='administrador'): ?>
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Empresas</a>
     <ul class="dropdown-menu">
@@ -148,6 +148,7 @@
       <li><a href="/listar-empresa">Listar</a></li>
     </ul>
   </li>
+
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Convenios</a>
     <ul class="dropdown-menu">
@@ -155,7 +156,7 @@
       <li><a href="/listar-convenio">Listar</a></li>
     </ul>
   </li>
-
+  <?php endif; ?>
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Pasantias</a>
     <ul class="dropdown-menu">
@@ -170,10 +171,13 @@
       <li><a href="/listar-practica">Listar</a></li>
     </ul>
   </li>
+  <li class="nodropdown">
+    <a href="/estadisticas" class="dropdown-toggle disabled" data-toggle="dropdown" >Estadisticas</a>
+  </li>
 
 
   <li class="nodropdown">
-    <a href="#" class="dropdown-toggle disabled" data-toggle="dropdown" target="_blank">Información</a>
+    <a href="#" class="dropdown-toggle disabled" data-toggle="dropdown" >Información</a>
   </li>
 
 
