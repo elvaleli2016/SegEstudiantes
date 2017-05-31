@@ -172,12 +172,12 @@
     </ul>
   </li>
   <li class="nodropdown">
-    <a href="/estadisticas" class="dropdown-toggle disabled" data-toggle="dropdown" target="_blank">Estadisticas</a>
+    <a href="/estadisticas" class="dropdown-toggle disabled" data-toggle="dropdown" >Estadisticas</a>
   </li>
 
 
   <li class="nodropdown">
-    <a href="#" class="dropdown-toggle disabled" data-toggle="dropdown" target="_blank">Información</a>
+    <a href="#" class="dropdown-toggle disabled" data-toggle="dropdown" >Información</a>
   </li>
 
 

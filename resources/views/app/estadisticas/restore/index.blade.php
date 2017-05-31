@@ -103,7 +103,32 @@
           </div>
         </div>
         <!-- ./col -->
+
+        <br><br>
+        <div class="col-lg-6 col-xs-6">
+
+          <!-- DONUT CHART -->
+          <div class="box box-danger">
+            <div class="box-header with-border">
+              <h3 class="box-title">Ultimos dos Periodos de Practicas</h3>
+
+              <div class="box-tools pull-right">
+                
+              </div>
+            </div>
+            <div class="box-body">
+              <canvas id="pieChart" style="height:250px"></canvas>
+            </div>
+            <div id="legend"></div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+
+
       </div>
+
+
 
           </div>
 
