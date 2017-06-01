@@ -31,7 +31,7 @@
               </section>
               <section style="padding : 10px 25px 25px 25px;">
                   <div class="col-md-12">
-                      <form role="form" id="form-pasantia" action="/editar-pasantia" method="POST" enctype="multipart/form-data">
+                      <form role="form" id="form-pasantia" action="../editar-pasantia" method="POST" enctype="multipart/form-data">
                           <div class="box box-danger">
                             <input name="id" type="hidden"  value="{{$pasantia->id}}">
                               <input name="_token" type="hidden" id="token" value="{{ csrf_token() }}">

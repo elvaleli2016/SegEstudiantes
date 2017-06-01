@@ -77,10 +77,10 @@
                                         <td>{{$dato['fecha_ini']}}</td>
                                         <td>{{$dato['fecha_fin']}}</td>
                                         <td >
-                                          <a style="color:#FFF" title="Editar" href="/editar-pasantia/{{$dato->id}}" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
-                                          <a style="color:#FFF" title="Agregar entrega" href="/entrega-pasantia/{{$dato->id}}" class="btn btn-success  btn-sm" data-original-title="Entrega" data-toggle="tooltip" ><i class="fa fa-plus"></i></a>
+                                          <a style="color:#FFF" title="Editar" href="./editar-pasantia/{{$dato->id}}" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
+                                          <a style="color:#FFF" title="Agregar entrega" href="./entrega-pasantia/{{$dato->id}}" class="btn btn-success  btn-sm" data-original-title="Entrega" data-toggle="tooltip" ><i class="fa fa-plus"></i></a>
                                         @if(session('usuario')['tipo']!="docente")
-                                          <a style="color:#FFF" title="Eliminar" href="/eliminar-pasantia/{{$dato->id}}" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" onclick="return confirm('Seguro desea eliminar la pasantia')"><i class="fa fa-times-circle"></i></a>
+                                          <a style="color:#FFF" title="Eliminar" href="./eliminar-pasantia/{{$dato->id}}" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" onclick="return confirm('Seguro desea eliminar la pasantia')"><i class="fa fa-times-circle"></i></a>
                                         @endif
                                     </tr>
 

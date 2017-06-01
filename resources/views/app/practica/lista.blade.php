@@ -77,10 +77,10 @@
                                         <td>{{$dato['ano']}}</td>
                                         <td>{{$dato['semestre']}}</td>
                                         <td>
-                                          <a style="color:#FFF" href="/editar-practica/{{$dato->id}}" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
-                                        <a style="color:#FFF" href="/entrega-pasantia/{{$dato->id}}" class="btn btn-success  btn-sm" data-original-title="Entrega" data-toggle="tooltip" ><i class="fa fa-plus"></i></a>
+                                          <a style="color:#FFF" href="./editar-practica/{{$dato->id}}" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
+                                        <a style="color:#FFF" href="./entrega-pasantia/{{$dato->id}}" class="btn btn-success  btn-sm" data-original-title="Entrega" data-toggle="tooltip" ><i class="fa fa-plus"></i></a>
                                         @if(session('usuario')['tipo']!="docente")
-                                        <a style="color:#FFF" href="/eliminar-practica/{{$dato->id}}" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" onclick="return confirm('Seguro desea eliminar la practica')" ><i class="fa fa-times-circle"></i></a>
+                                        <a style="color:#FFF" href="./eliminar-practica/{{$dato->id}}" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" onclick="return confirm('Seguro desea eliminar la practica')" ><i class="fa fa-times-circle"></i></a>
                                         @endif
                                     </tr>
 

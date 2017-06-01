@@ -62,7 +62,7 @@
                                         <td>{{$dato['nombre']}}</td>
                                         <td>{{$dato['apellido']}}</td>
                                         <td>{{$dato['codigo']}}</td>
-                                        <td><a style="color:#FFF" title="Editar" href="/editar-estudiante/{{$dato->id}}" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
+                                        <td><a style="color:#FFF" title="Editar" href="./editar-estudiante/{{$dato->id}}" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
                                         <button style="color:#FFF" title="Eliminar" id="eliminar-estudiante" data-original-title="Eliminar" data-id="{{$dato->id}}" data-toggle="tooltip" class="btn btn-danger btn-sm"> <i class="fa fa-times-circle"></i></button>
                                      </a>
                                     </tr>
