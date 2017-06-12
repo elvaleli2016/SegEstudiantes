@@ -22,7 +22,6 @@ Route::get("/inicio",'SesionController@getValidar');
 Route::post("/inicio",'SesionController@validar');
 Route::get("/salir","SesionController@salir");
 
-
 /* Convenios */
 Route::get('/agregar-convenio', ['as' => 'app.convenio.agregar', 'uses' => 'ConvenioController@getAgregar']);
 Route::post('/agregar-convenio', ['as' => 'app.convenio.agregar', 'uses' => 'ConvenioController@postAgregar']);
@@ -101,3 +100,4 @@ Route::get('/eliminar-practica/{id}', ['as' => 'app.practica.eliminar', 'uses' =
 
 
 Route::get('/estadisticas', ['as' => 'app.estadisticas.index', 'uses' => 'EstadisticasController@index']);
+Route::get('/informe', ['as' => 'app.informe.index', 'uses' => 'EstadisticasController@getInforme']);

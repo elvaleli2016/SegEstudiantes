@@ -182,7 +182,7 @@
 
 
   <li class="nodropdown">
-    <a href="#" class="dropdown-toggle disabled" data-toggle="dropdown" >Información</a>
+    <a href="<?php echo e(URL::asset('informe')); ?>" class="dropdown-toggle disabled" data-toggle="dropdown" >Información</a>
   </li>
 
 

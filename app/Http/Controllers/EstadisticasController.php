@@ -48,4 +48,8 @@ class EstadisticasController extends Controller
     return view($this->direccion."index",compact("docentes", "estudiantes", "empresas", "convenios", "pasantias", "practicas", "anio", "semestre", "listapracticas", "listapracticas2", "anio2", "semestre2"));
   }
 
+  public function getInforme(){
+    return view($this->direccion."informe");
+  }
+
 }
