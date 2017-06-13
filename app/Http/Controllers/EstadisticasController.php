@@ -16,7 +16,9 @@ class EstadisticasController extends Controller
   function __construct(){
     $this->direccion="app.estadisticas.";
   }
-
+/**
+*
+**/
   public function index(){
     $docentes=Docente::count();
     $estudiantes=Estudiante::count();
@@ -38,7 +40,7 @@ class EstadisticasController extends Controller
       $anio2=$anio-1;
       $semestre2++;
     }
-    
+
     $listapracticas=Practica::where("ano", "=", $anio)->where("semestre", "=", $semestre)->count();
     $listapracticas2=Practica::where("ano", "=", $anio2)->where("semestre", "=", $semestre2)->count();
 
@@ -50,6 +52,23 @@ class EstadisticasController extends Controller
 
   public function getInforme(){
     return view($this->direccion."informe");
+  }
+
+  public function postInforme(Request $request){
+    $tipo_busqueda=$request->tipo_busqueda;
+    $tipo=$request->tipo;
+    $busqueda=$request->buscar;
+    $res=null;
+    if($tipo=='empresa'){
+      $res=Empresa::where('nombre','like',"%".$busqueda."%")->get();
+    }
+    if($res!=null)
+      return response()->json([
+          $res->toArray()
+      ],200);
+    return response()->json([
+        $res
+    ],200);
   }
 
 }

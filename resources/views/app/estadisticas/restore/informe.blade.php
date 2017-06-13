@@ -1,4 +1,4 @@
-<meta name="csrf-token" content="{{ csrf_token() }}">
+
 <div class="container content-prin profile">
     <div class="row margin-top-10">
         <div class="headline-center-v2 headline-center-v2-dark margin-bottom-10">
@@ -39,18 +39,19 @@
                         <div class="col-sm-12">
                             <div class="col-md-2">
                                 <div class="form-group">
-                                    <label for="empresa">Tipo informe:</label>
+                                  <input id="_token" name="_token" type="hidden" value="{{ csrf_token() }}">
+                                  <label for="empresa">Tipo informe:</label>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <select class=" selectpicker form-control" style="width:100%"  tabindex="-1" aria-hidden="true" name="tipo" id="tipo" data-live-search="true">
-                                        
+
                                         <option value="pasantia">Pasantia</option>
                                         <option value="practica">Practica</option>
                                         <option value="empresa">Empresas</option>
                                         <option value="convenio">Convenios</option>
-                                                 
+
                                     </select>
                                 </div>
                             </div>
@@ -63,10 +64,10 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <select class=" selectpicker form-control" style="width:100%"  tabindex="-1" aria-hidden="true" name="tipo-busqueda" id="tipo-busqueda" data-live-search="true">
-                                        
+
                                         <option value="convenio">Convenio</option>
                                         <option value="emprea">Empresa</option>
-                                                 
+
                                     </select>
                                 </div>
                             </div>
@@ -82,15 +83,15 @@
                                 </div>
                             </div>
                             <div class="col-xs-12" style="height:20px"></div>
-                            <div class="col-xs-6"> 
+                            <div class="col-xs-6">
                                 <div class="form-group">
-                                <button class="btn btn-success btn-flat" style="width:100%">BUSCAR</button>
+                                <button id="buscar-informe" class="btn btn-success btn-flat" style="width:100%">BUSCAR</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                   
+
 
                 </div>
             </div>
@@ -151,7 +152,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                
+
                                 </tbody>
                                 <tfoot>
 
@@ -208,7 +209,7 @@
 </div>
 
 <div id="pasantia">
-    
+
 
     <section style="padding : 10px 25px 25px 25px;">
         <div class="box box-danger">
@@ -262,4 +263,3 @@
 </div>
 </div>
 </div>
-
