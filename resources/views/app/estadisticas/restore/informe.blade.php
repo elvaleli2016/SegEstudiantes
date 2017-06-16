@@ -133,7 +133,7 @@
 
                     <div class="row">
                         <div class="col-sm-12">
-                            <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+                            <table  class="table table-bordered table-striped" role="grid" aria-describedby="example1_info">
                                 <thead>
                                 <tr role="row">
                                     <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending"
@@ -151,7 +151,7 @@
 
                                 </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="table_empresa">
 
                                 </tbody>
                                 <tfoot>
@@ -220,7 +220,7 @@
 
                     <div class="row">
                         <div class="col-sm-12">
-                            <table id="example3" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+                            <table  class="table table-bordered table-striped" role="grid" aria-describedby="example1_info">
                                 <thead>
                                 <tr role="row">
                                     <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending"
@@ -240,7 +240,7 @@
 
                                 </tr>
                                 </thead>
-                                <tbody id="table-pasantia">
+                                <tbody id="table_pasantia">
                                 </tbody>
                                 <tfoot>
 

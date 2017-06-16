@@ -55,12 +55,27 @@ class EstadisticasController extends Controller
   }
 
   public function postInforme(Request $request){
-    $tipo_busqueda=$request->tipo_busqueda;
+    $tipo_bus=$request->tipo_busqueda;
     $tipo=$request->tipo;
-    $busqueda=$request->buscar;
+    $bus=$request->buscar;
     $res=null;
     if($tipo=='empresa'){
-      $res=Empresa::where('nombre','like',"%".$busqueda."%")->get();
+      if($tipo_bus=='empresa'){
+        $res=Empresa::where('nombre','like',"%".$bus."%")->orWhere('nit','=',$bus)->orWhere('representante','like',"%".$bus."%")->distinct()->get();
+      }
+      if($tipo_bus=="convenio"){
+        $res=Empresa::join("convenios",'convenios.empresa','=','empresas.id')->select('empresas.*')
+        ->where('convenios.n_convenio','=',$bus)->orWhere('convenios.representante_emp','like',"%".$bus."%")->orWhere('convenios.representante_uni','like',"%".$bus."%")->orWhere('convenios.concepto','like',"%".$bus."%")->orWhere('convenios.descripcion','like',"%".$bus."%")->orWhere('convenios.palabras_clave','like',"%".$bus."%")
+        ->distinct()->get();
+        
+      }
+    }
+    if($tipo=='pasantia'){
+      if($tipo_bus=='convenio'){
+        $res=Pasantia::select('pasantias.*')->join('convenios','convenios.id','=','pasantias.convenio')
+        ->where('convenios.n_convenio','=',$bus)->orWhere('convenios.representante_emp','like',"%".$bus."%")->orWhere('convenios.representante_uni','like',"%".$bus."%")->orWhere('convenios.concepto','like',"%".$bus."%")->orWhere('convenios.descripcion','like',"%".$bus."%")->orWhere('convenios.palabras_clave','like',"%".$bus."%")
+        ->distinct()->get();
+      }
     }
     if($res!=null)
       return response()->json([
