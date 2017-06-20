@@ -67,8 +67,7 @@
                                       <div class="col-md-6">
                                           <div class="form-group">
                                               <label>Estudiante</label>
-                                              <select requerid class="selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="estudiante" data-live-search="true" multiple>
-                                                  <option selected></option>
+                                              <select class="js-example-basic-multiple" name="estudiante[]" data-placeholder="Seleccione un estudiante" multiple="multiple" style="width: 100%;" >
                                                   <?php $__currentLoopData = $estudiantes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $dato): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                       <option data-tokens="<?php echo e($dato->id); ?>" value="<?php echo e($dato->id); ?>"><?php echo e($dato->nombre); ?> <?php echo e($dato->apellido); ?></option>
                                                   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

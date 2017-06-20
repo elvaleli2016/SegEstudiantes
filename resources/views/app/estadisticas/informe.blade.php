@@ -25,27 +25,35 @@
                   data: { "tipo_busqueda": tipoB, "tipo": tipo, "buscar": buscar, "_token": token },
                   success: function (res) {
                     var dato="";
-                    if(res!=null)
+
+                    if(res!=null&&res[0]!=null){
                       res=res[0]
-                    if(tipo=="pasantia"){       //PASANTIA
-                      $('#table_pasantia').html('');
-                      for(var i=0;i<res.length;i++){
-                        dat=res[i];
-                        dato="<tr><th>"+dat.titulo+"</th><th>"+dat.estudiante+"</th><th>"+dat.tutor+"</th><th>"+dat.concepto+"</th><th>"+dat.fecha_ini+"</th><th>"+dat.fecha_fin+"</th><th></th></tr>";
-                        $('#table_pasantia').append(dato);
+                      if(tipo=="pasantia"){       //PASANTIA
+                        $('#table_pasantia').html('');
+                        for(var i=0;i<res.length;i++){
+                          dat=res[i];
+                          dato="<tr><th>"+dat.titulo+"</th><th>"+dat.estudiante+"</th><th>"+dat.tutor+"</th><th>"+dat.concepto+"</th><th>"+dat.empresa+"</th><th>"+dat.fecha_ini+"</th><th>"+dat.fecha_fin+"</th></tr>";
+                          $('#table_pasantia').append(dato);
+                        }
+                        $('#pasantia').show();
+                      }else if(tipo=="practica"){       //PRACTICA
+                        $('#table_practica').html('');
+                        for(var i=0;i<res.length;i++){
+                          dat=res[i];
+                          dato="<tr><th>"+dat.titulo+"</th><th>"+dat.estudiante+"</th><th>"+dat.tutor+"</th><th>"+dat.concepto+"</th><th>"+dat.empresa+"</th><th>"+dat.ano+"</th><th>"+dat.semestre+"</th></tr>";
+                          $('#table_practica').append(dato);
+                        }
+                        $('#practica').show();
+                      }else if(tipo=="empresa"){  //EMPRESA
+                        $('#table_empresa').html('');
+                        for(var i=0;i<res.length;i++){
+                          dato="<tr><th>"+res[i].nombre+"</th><th>"+res[i]['nit']+"</th><th>"+res[i].representante+"</th><th>"+res[i].ciudad+"</th><th>"+res[i].direccion+"</th><th></th></tr>";
+                          $('#table_empresa').append(dato);
+                        }
+                        $('#empresa').show();
                       }
-                      $('#pasantia').show();
-                    }else if(tipo=="practica"){ //PRACTICA
-                      $('#pasantia').show();
-                    }else if(tipo=="empresa"){  //EMPRESA
-                      $('#table_empresa').html('');
-                      for(var i=0;i<res.length;i++){
-                        dato="<tr><th>"+res[i].nombre+"</th><th>"+res[i]['nit']+"</th><th>"+res[i].representante+"</th><th>"+res[i].ciudad+"</th><th>"+res[i].direccion+"</th><th></th></tr>";
-                        $('#table_empresa').append(dato);
-                      }
-                      $('#empresa').show();
+                      
                     }
-                    console.log(res[0]);
                   },
                   error: function (err) {
                   }
@@ -57,6 +65,7 @@
           $('#empresa').hide();
           $('#persona').hide();
           $('#pasantia').hide();
+          $('#practica').hide();
         }
     </script>
 @endsection

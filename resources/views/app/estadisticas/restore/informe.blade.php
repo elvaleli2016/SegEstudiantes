@@ -66,7 +66,7 @@
                                     <select class=" selectpicker form-control" style="width:100%"  tabindex="-1" aria-hidden="true" name="tipo-busqueda" id="tipo-busqueda" data-live-search="true">
 
                                         <option value="convenio">Convenio</option>
-                                        <option value="emprea">Empresa</option>
+                                        <option value="empresa">Empresa</option>
 
                                     </select>
                                 </div>
@@ -147,7 +147,7 @@
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
                                         style="width: 101px;">Dirección</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                                        aria-label="CSS grade: activate to sort column ascending" style="width: 70px;">Acciones</th>
+                                        aria-label="CSS grade: activate to sort column ascending" style="width: 70px;"></th>
 
                                 </tr>
                                 </thead>
@@ -190,7 +190,7 @@
                                         style="width: 131px;">Codigo</th>
 
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                                        aria-label="CSS grade: activate to sort column ascending" style="width: 70px;">Acciones</th>
+                                        aria-label="CSS grade: activate to sort column ascending" style="width: 70px;"></th>
 
                                 </tr>
                                 </thead>
@@ -232,15 +232,64 @@
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                         aria-label="CSS grade: activate to sort column ascending" style="width: 100px;">Convenio</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
-                                        style="width: 101px;">Fecha inicio</th>
+                                        style="width: 101px;">Empresa</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
-                                        style="width: 101px;">Fecha fin</th>
+                                        style="width: 101px;">Fecha inicio</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                                        aria-label="CSS grade: activate to sort column ascending" style="width: 70px;">Acciones</th>
+                                        aria-label="CSS grade: activate to sort column ascending" style="width: 70px;">Fecha fin</th>
 
                                 </tr>
                                 </thead>
                                 <tbody id="table_pasantia">
+                                </tbody>
+                                <tfoot>
+
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /.box-body -->
+        </div>
+    </section>
+
+</div>
+
+<div id="practica">
+
+
+    <section style="padding : 10px 25px 25px 25px;">
+        <div class="box box-danger">
+
+            <!-- /.box-header -->
+            <div class="box-body">
+                <div id="" class="dataTables_wrapper form-inline dt-bootstrap">
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table  class="table table-bordered table-striped" role="grid" aria-describedby="example1_info">
+                                <thead>
+                                <tr role="row">
+                                    <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending"
+                                        aria-label="Rendering engine: activate to sort column descending" style="width: 105px;">Titulo</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                        aria-label="Browser: activate to sort column ascending" style="width: 150px;">Nombre estudiante</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
+                                        style="width: 131px;">Nombre tutor</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                        aria-label="CSS grade: activate to sort column ascending" style="width: 100px;">Convenio</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
+                                        style="width: 101px;">Empresa</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
+                                        style="width: 101px;">Año</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                        aria-label="CSS grade: activate to sort column ascending" style="width: 70px;">Semestre</th>
+
+                                </tr>
+                                </thead>
+                                <tbody id="table_practica">
                                 </tbody>
                                 <tfoot>
 
