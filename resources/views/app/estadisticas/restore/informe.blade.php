@@ -227,6 +227,12 @@
                                         aria-label="Rendering engine: activate to sort column descending" style="width: 105px;">Titulo</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                         aria-label="Browser: activate to sort column ascending" style="width: 150px;">Nombre estudiante</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                        aria-label="Browser: activate to sort column ascending" style="width: 150px;">Código del estudiante</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                        aria-label="Browser: activate to sort column ascending" style="width: 150px;">Número documento idnetificación</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                        aria-label="Browser: activate to sort column ascending" style="width: 150px;">Programa academico</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
                                         style="width: 131px;">Nombre tutor</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"

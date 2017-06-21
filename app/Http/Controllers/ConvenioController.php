@@ -51,8 +51,9 @@ class ConvenioController extends Controller
     ],200);
   }
   public function getEditar($id){
-
-    //return view($this->direccion."editar",compact(''));
+    $convenio=Convenios::findOrFail($id);
+    $empresas=Empresa::all();
+    return view($this->direccion."editar",compact('empresas','convenio'));
   }
 
   public function postEditar(Request $request){

@@ -32,7 +32,9 @@
                         $('#table_pasantia').html('');
                         for(var i=0;i<res.length;i++){
                           dat=res[i];
-                          dato="<tr><th>"+dat.titulo+"</th><th>"+dat.estudiante+"</th><th>"+dat.tutor+"</th><th>"+dat.concepto+"</th><th>"+dat.empresa+"</th><th>"+dat.fecha_ini+"</th><th>"+dat.fecha_fin+"</th></tr>";
+                          dato="<tr><th>"+dat.titulo+"</th><th>"+dat.est_nombre+' '+dat.est_apellido+"</th><th>"+dat.est_codigo+"</th><th>"+dat.est_identificacion
+                          +"</th><th>Ingenieria de Sistemas</th><th>"+dat.tutor+"</th><th>"+dat.concepto+"</th><th>"+dat.empresa+"</th><th>"+dat.fecha_ini+"</th><th>"+dat.fecha_fin
+                          +"</th></tr>";
                           $('#table_pasantia').append(dato);
                         }
                         $('#pasantia').show();
@@ -40,7 +42,7 @@
                         $('#table_practica').html('');
                         for(var i=0;i<res.length;i++){
                           dat=res[i];
-                          dato="<tr><th>"+dat.titulo+"</th><th>"+dat.estudiante+"</th><th>"+dat.tutor+"</th><th>"+dat.concepto+"</th><th>"+dat.empresa+"</th><th>"+dat.ano+"</th><th>"+dat.semestre+"</th></tr>";
+                          dato="<tr><th>"+dat.titulo+"</th><th>"+dat.est_nombre+' '+dat.est_apellido+"</th><th>"+dat.tutor+"</th><th>"+dat.concepto+"</th><th>"+dat.empresa+"</th><th>"+dat.ano+"</th><th>"+dat.semestre+"</th></tr>";
                           $('#table_practica').append(dato);
                         }
                         $('#practica').show();

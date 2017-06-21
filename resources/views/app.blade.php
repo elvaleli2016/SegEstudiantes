@@ -14,44 +14,44 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon -->
-    <link href="{{$base}}/rsc/img/favicon.ico" rel="Shortcut icon">
+    <link href="{{URL::asset('rsc/img/favicon.ico')}}" rel="Shortcut icon">
     <!-- Web Fonts -->
     <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/ie8.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/blocks.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/plugins.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/style.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/app.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/shop.plugins.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/shop.blocks.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/style-switcher.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/shop.style.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/header-v6.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/header-v8.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/header.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/footer-v1.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/animate.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/line-icons.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/owl.carousel.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/horizontal-parallax.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/layerslider.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/ured.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/jquery.mCustomScrollbar.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/sky-forms.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/custom-sky-forms.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/profile.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/brand-buttons.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/brand-buttons-inversed.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/hover.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/custom-hover-effects.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/custom.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/pgwslider.min.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/css/ufps.css">
-    <link type="text/css" rel="stylesheet" href="{{$base}}/plugins/datatables/dataTables.bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/bootstrap.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/ie8.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/blocks.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/plugins.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/style.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/app.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/shop.plugins.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/shop.blocks.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/style-switcher.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/shop.style.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/header-v6.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/header-v8.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/header.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/footer-v1.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/animate.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/line-icons.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/font-awesome.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/owl.carousel.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/horizontal-parallax.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/layerslider.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/ured.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/jquery.mCustomScrollbar.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/sky-forms.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/custom-sky-forms.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/profile.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/brand-buttons.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/brand-buttons-inversed.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/hover.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/custom-hover-effects.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/custom.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/pgwslider.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/ufps.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('plugins/datatables/dataTables.bootstrap.css')}}">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="{{$base}}/plugins/bootstrap-select/bootstrap-select.min.css">
+    <link rel="stylesheet" href="{{URL::asset('plugins/bootstrap-select/bootstrap-select.min.css')}}">
 
     @yield("style")
   </head>
@@ -82,7 +82,7 @@
                       {{session('usuario')['tipo']}} : {{session('usuario')['nombre']}}
                     </li>
                     <li class="cd-log_reg home">
-                      <a href="{{$base}}/salir">Salir</a>
+                      <a href="{{URL::asset('salir')}}">Salir</a>
                     </li>
                   </ul>
                 </div>
@@ -98,11 +98,11 @@
               <div class="row">
                 <div class="col-md-4 col-sm-4 col-xs-5">
                   <a href="index-2.html">
-                    <img id="logo-header" src="{{$base}}/rsc/img/logo_vertical_ingsistemas_ht180.png" alt="Logo Programa de Ingeniería de Sistemas" style="max-height:180px;">
+                    <img id="logo-header" src="{{URL::asset('rsc/img/logo_vertical_ingsistemas_ht180.png')}}" alt="Logo Programa de Ingeniería de Sistemas" style="max-height:180px;">
                   </a>
                 </div>
                 <div class="col-md-2 col-ms-1 col-xs-2 pull-right">
-                  <a href="http://www.ufps.edu.co/"><img class="header-banner" src="{{$base}}/rsc/img/logo_ufps.png" style="max-height:160px;" alt="Escudo de la Universidad Francisco de Paula Santander" ></a>
+                  <a href="http://www.ufps.edu.co/"><img class="header-banner" src="{{URL::asset('rsc/img/logo_ufps.png')}}" style="max-height:160px;" alt="Escudo de la Universidad Francisco de Paula Santander" ></a>
                 </div>
               </div>
             </div>
@@ -112,7 +112,7 @@
         <div class="menu-responsive">
           <!-- Logo -->
           <a class="logo logo-responsive" href="index-2.html" style="margin-left:5px;">
-            <img src="{{$base}}/rsc/img/horizontal_logo_ingsistemas_pequeno.png" alt="Logo">
+            <img src="{{URL::asset('rsc/img/horizontal_logo_ingsistemas_pequeno.png')}}" alt="Logo">
           </a>
           <!-- End Logo -->
           <!-- Toggle get grouped for better mobile display -->
@@ -131,8 +131,8 @@
     <li class="dropdown">
       <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Docentes</a>
       <ul class="dropdown-menu">
-        <li><a href="{{$base}}/agregar-docente">Registrar </a></li>
-        <li><a href="{{$base}}/listar-docente">Listar</a></li>
+        <li><a href="{{URL::asset('agregar-docente')}}">Registrar </a></li>
+        <li><a href="{{URL::asset('listar-docente')}}">Listar</a></li>
       </ul>
     </li>
   @endif
@@ -140,43 +140,43 @@
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Estudiantes</a>
     <ul class="dropdown-menu">
-      <li><a href="{{$base}}/agregar-estudiante">Registrar </a></li>
-      <li><a href="{{$base}}/listar-estudiante">Listar</a></li>
+      <li><a href="{{URL::asset('agregar-estudiante')}}">Registrar </a></li>
+      <li><a href="{{URL::asset('listar-estudiante')}}">Listar</a></li>
     </ul>
   </li>
   @if(session('usuario')['tipo']=='administrador')
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Empresas</a>
     <ul class="dropdown-menu">
-      <li><a href="{{$base}}/agregar-empresa">Registrar </a></li>
-      <li><a href="{{$base}}/listar-empresa">Listar</a></li>
+      <li><a href="{{URL::asset('agregar-empresa')}}">Registrar </a></li>
+      <li><a href="{{URL::asset('listar-empresa')}}">Listar</a></li>
     </ul>
   </li>
 
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Convenios</a>
     <ul class="dropdown-menu">
-      <li><a href="{{$base}}/agregar-convenio">Registrar </a></li>
-      <li><a href="{{$base}}/listar-convenio">Listar</a></li>
+      <li><a href="{{URL::asset('agregar-convenio')}}">Registrar </a></li>
+      <li><a href="{{URL::asset('listar-convenio')}}">Listar</a></li>
     </ul>
   </li>
   @endif
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Pasantias</a>
     <ul class="dropdown-menu">
-      <li><a href="{{$base}}/agregar-pasantia">Registrar </a></li>
-      <li><a href="{{$base}}/listar-pasantia">Listar</a></li>
+      <li><a href="{{URL::asset('agregar-pasantia')}}">Registrar </a></li>
+      <li><a href="{{URL::asset('listar-pasantia')}}">Listar</a></li>
     </ul>
   </li>
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Practica</a>
     <ul class="dropdown-menu">
-      <li><a href="{{$base}}/agregar-practica">Registrar </a></li>
-      <li><a href="{{$base}}/listar-practica">Listar</a></li>
+      <li><a href="{{URL::asset('agregar-practica')}}">Registrar </a></li>
+      <li><a href="{{URL::asset('listar-practica')}}">Listar</a></li>
     </ul>
   </li>
   <li class="nodropdown">
-    <a href="{{$base}}/estadisticas" class="dropdown-toggle disabled" data-toggle="dropdown" >Estadisticas</a>
+    <a href="{{URL::asset('estadisticas')}}" class="dropdown-toggle disabled" data-toggle="dropdown" >Estadisticas</a>
   </li>
 
 
@@ -218,78 +218,78 @@
 
   <div class="owl-clients-v1" style="background-color:#EEE; padding: 5px;">
     <div class="item">
-      <a href="http://www.mineducacion.gov.co/" target="_blank"><img src="{{$base}}/rsc/img/mineducacion.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.mineducacion.gov.co/" target="_blank"><img src="{{URL::asset('rsc/img/mineducacion.png')}}" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.gobiernoenlinea.gov.co/" target="_blank"><img src="{{$base}}/rsc/img/gobiernoenlinea.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.gobiernoenlinea.gov.co/" target="_blank"><img src="{{URL::asset('rsc/img/gobiernoenlinea.png')}}" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.contraloriagen.gov.co/" target="_blank"><img src="{{$base}}/rsc/img/contraloria.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.contraloriagen.gov.co/" target="_blank"><img src="{{URL::asset('rsc/img/contraloria.png')}}" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.procuraduria.gov.co/" target="_blank"><img src="{{$base}}/rsc/img/procuraduriageneraldelanacion.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.procuraduria.gov.co/" target="_blank"><img src="{{URL::asset('rsc/img/procuraduriageneraldelanacion.png')}}" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.urnadecristal.gov.co/" target="_blank"><img src="{{$base}}/rsc/img/urnadecristal.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.urnadecristal.gov.co/" target="_blank"><img src="{{URL::asset('rsc/img/urnadecristal.png')}}" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.icfes.gov.co/" target="_blank"><img src="{{$base}}/rsc/img/icfes.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.icfes.gov.co/" target="_blank"><img src="{{URL::asset('rsc/img/icfes.png')}}" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.icetex.gov.co/" target="_blank"><img src="{{$base}}/rsc/img/icetex.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.icetex.gov.co/" target="_blank"><img src="{{URL::asset('rsc/img/icetex.png')}}" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.universia.net.co/" target="_blank"><img src="{{$base}}/rsc/img/universia.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.universia.net.co/" target="_blank"><img src="{{URL::asset('rsc/img/universia.png')}}" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.colombiaaprende.edu.co/" target="_blank"><img src="{{$base}}/rsc/img/colombiaaprende.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.colombiaaprende.edu.co/" target="_blank"><img src="{{URL::asset('rsc/img/colombiaaprende.png')}}" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.renata.edu.co/" target="_blank"><img src="{{$base}}/rsc/img/renata-logo.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.renata.edu.co/" target="_blank"><img src="{{URL::asset('rsc/img/renata-logo.png')}}" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.colciencias.gov.co/" target="_blank"><img src="{{$base}}/rsc/img/COLCIENCIAS.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.colciencias.gov.co/" target="_blank"><img src="{{URL::asset('rsc/img/COLCIENCIAS.png')}}" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.cna.gov.co/" target="_blank"><img src="{{$base}}/rsc/img/cna.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.cna.gov.co/" target="_blank"><img src="{{URL::asset('rsc/img/cna.png')}}" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.mineducacion.gov.co/sistemasdeinformacion/1735/propertyvalue-41698.html" target="_blank"><img src="{{$base}}/rsc/img/SACES.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.mineducacion.gov.co/sistemasdeinformacion/1735/propertyvalue-41698.html" target="_blank"><img src="{{URL::asset('rsc/img/SACES.png')}}" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.mineducacion.gov.co/sistemasdeinformacion/1735/w3-propertyname-2672.html" target="_blank"><img src="{{$base}}/rsc/img/SNIES.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.mineducacion.gov.co/sistemasdeinformacion/1735/w3-propertyname-2672.html" target="_blank"><img src="{{URL::asset('rsc/img/SNIES.png')}}" class="hover-shadow" alt=""></a>
     </div>
     <div class="item">
-      <a href="http://www.mineducacion.gov.co/sistemasdeinformacion/1735/w3-propertyname-2895.html" target="_blank"><img src="{{$base}}/rsc/img/SPADIES.png" class="hover-shadow" alt=""></a>
+      <a href="http://www.mineducacion.gov.co/sistemasdeinformacion/1735/w3-propertyname-2895.html" target="_blank"><img src="{{URL::asset('rsc/img/SPADIES.png')}}" class="hover-shadow" alt=""></a>
     </div>
   </div>
-  <script type="text/javascript" src="{{$base}}/js/jquery.min.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/jquery-migrate.min.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/pgwslider.min.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/back-to-top.min.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/smoothScroll.min.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/owl.carousel.min.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/sequence.jquery-min.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/greensock.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/layerslider.transitions.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/layerslider.kreaturamedia.jquery.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/custom.min.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/app.min.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/owl-carousel.min.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/datepicker.min.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/validation.min.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/jquery.mCustomScrollbar.concat.min.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/owl-recent-works.min.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/wow.min.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/ufps.js"></script>
-  <script type="text/javascript" src="{{$base}}/js/base.js"></script>
+  <script type="text/javascript" src="{{URL::asset('js/jquery.min.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/jquery-migrate.min.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/bootstrap.min.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/pgwslider.min.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/back-to-top.min.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/smoothScroll.min.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/owl.carousel.min.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/sequence.jquery-min.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/greensock.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/layerslider.transitions.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/layerslider.kreaturamedia.jquery.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/custom.min.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/app.min.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/owl-carousel.min.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/datepicker.min.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/validation.min.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/owl-recent-works.min.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/wow.min.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/ufps.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/base.js')}}"></script>
 
   <!-- Latest compiled and minified JavaScript -->
-  <script src="{{$base}}/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+  <script src="{{URL::asset('plugins/bootstrap-select/bootstrap-select.min.js')}}"></script>
 
   <!-- (Optional) Latest compiled and minified JavaScript translation files -->
-  <script src="{{$base}}/plugins/bootstrap-select/i18n/defaults-es_ES.min.js"></script>
+  <script src="{{URL::asset('plugins/bootstrap-select/i18n/defaults-es_ES.min.js')}}"></script>
 
 
   <!-- Datepicker-->

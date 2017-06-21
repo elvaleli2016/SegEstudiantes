@@ -72,18 +72,18 @@ class EstadisticasController extends Controller
     }
     else if($tipo=='pasantia'){
       if($tipo_bus=='convenio'){
-        $res=Pasantia::select('pasantias.titulo','est.nombre as estudiante','doc.nombre as tutor','convenios.concepto','pasantias.fecha_ini','pasantias.fecha_fin','emp.nombre as empresa')
-        ->join('docentes','docentes.id','=','pasantias.tutor')->join('usuarios as doc','doc.id','=','docentes.id')
-        ->join('estudiantes','estudiantes.id','=','pasantias.estudiante')->join('usuarios as est','est.id','=','estudiantes.id')
+        $res=Pasantia::select('pasantias.titulo','est.identificacion as est_identificacion','est1.codigo as est_codigo','est.nombre as est_nombre','est.apellido as est_apellido','doc.nombre as tutor','convenios.concepto','pasantias.fecha_ini','pasantias.fecha_fin','emp.nombre as empresa')
+        ->join('docentes as doc1','doc1.id','=','pasantias.tutor')->join('usuarios as doc','doc.id','=','doc1.id')
+        ->join('estudiantes as est1','est1.id','=','pasantias.estudiante')->join('usuarios as est','est.id','=','est1.id')
         ->join('convenios','convenios.id','=','pasantias.convenio')
         ->join('empresas as emp','emp.id','=','convenios.empresa')
         ->where('convenios.n_convenio','=',$bus)->orWhere('convenios.representante_emp','like',"%".$bus."%")->orWhere('convenios.representante_uni','like',"%".$bus."%")->orWhere('convenios.concepto','like',"%".$bus."%")->orWhere('convenios.descripcion','like',"%".$bus."%")->orWhere('convenios.palabras_clave','like',"%".$bus."%")
         ->distinct()->get();
       }
       if($tipo_bus=='empresa'){
-        $res=Pasantia::select('pasantias.titulo','est.nombre as estudiante','doc.nombre as tutor','convenios.concepto','pasantias.fecha_ini','pasantias.fecha_fin','emp.nombre as empresa')
-        ->join('docentes','docentes.id','=','pasantias.tutor')->join('usuarios as doc','doc.id','=','docentes.id')
-        ->join('estudiantes','estudiantes.id','=','pasantias.estudiante')->join('usuarios as est','est.id','=','estudiantes.id')
+        $res=Pasantia::select('pasantias.titulo','est.identificacion as est_identificacion','est1.codigo as est_codigo','est.nombre as est_nombre','est.apellido as est_apellido','doc.nombre as tutor','convenios.concepto','pasantias.fecha_ini','pasantias.fecha_fin','emp.nombre as empresa')
+        ->join('docentes as doc1','doc1.id','=','pasantias.tutor')->join('usuarios as doc','doc.id','=','doc1.id')
+        ->join('estudiantes as est1','est1.id','=','pasantias.estudiante')->join('usuarios as est','est.id','=','est1.id')
         ->join('convenios','convenios.id','=','pasantias.convenio')
         ->join('empresas as emp','emp.id','=','convenios.empresa')
         ->where('emp.nombre','like',"%".$bus."%")->orWhere('emp.nit','=',$bus)
@@ -92,18 +92,18 @@ class EstadisticasController extends Controller
     }
     else if($tipo=='practica'){
       if($tipo_bus=='convenio'){
-        $res=Practica::select('practicas.titulo','est.nombre as estudiante','doc.nombre as tutor','convenios.concepto','practicas.ano','practicas.semestre','emp.nombre as empresa')
-        ->join('docentes','docentes.id','=','practicas.tutor')->join('usuarios as doc','doc.id','=','docentes.id')
-        ->join('estudiantes','estudiantes.id','=','practicas.estudiante')->join('usuarios as est','est.id','=','estudiantes.id')
+        $res=Practica::select('practicas.titulo','est1.codigo as est_codigo','est.nombre as est_nombre','est.apellido as est_apellido','doc.nombre as tutor','convenios.concepto','practicas.ano','practicas.semestre','emp.nombre as empresa')
+        ->join('docentes as doc1','doc1.id','=','practicas.tutor')->join('usuarios as doc','doc.id','=','doc1.id')
+        ->join('estudiantes as est1','est1.id','=','pasantias.estudiante')->join('usuarios as est','est.id','=','est1.id')
         ->join('convenios','convenios.id','=','practicas.convenio')
         ->join('empresas as emp','emp.id','=','convenios.empresa')
         ->where('convenios.n_convenio','=',$bus)->orWhere('convenios.representante_emp','like',"%".$bus."%")->orWhere('convenios.representante_uni','like',"%".$bus."%")->orWhere('convenios.concepto','like',"%".$bus."%")->orWhere('convenios.descripcion','like',"%".$bus."%")->orWhere('convenios.palabras_clave','like',"%".$bus."%")
         ->distinct()->get();
       }
       if($tipo_bus=='empresa'){
-        $res=Practica::select('practicas.titulo','est.nombre as estudiante','doc.nombre as tutor','convenios.concepto','practicas.ano','practicas.semestre','emp.nombre as empresa')
-        ->join('docentes','docentes.id','=','practicas.tutor')->join('usuarios as doc','doc.id','=','docentes.id')
-        ->join('estudiantes','estudiantes.id','=','practicas.estudiante')->join('usuarios as est','est.id','=','estudiantes.id')
+        $res=Practica::select('practicas.titulo','est1.codigo as est_codigo','est.nombre as est_nombre','est.apellido as est_apellido','doc.nombre as tutor','convenios.concepto','practicas.ano','practicas.semestre','emp.nombre as empresa')
+        ->join('docentes as doc1','doc1.id','=','practicas.tutor')->join('usuarios as doc','doc.id','=','doc1.id')
+        ->join('estudiantes as est1','est1.id','=','pasantias.estudiante')->join('usuarios as est','est.id','=','est1.id')
         ->join('convenios','convenios.id','=','practicas.convenio')
         ->join('empresas as emp','emp.id','=','convenios.empresa')
         ->where('emp.nombre','like',"%".$bus."%")->orWhere('emp.nit','=',$bus)
