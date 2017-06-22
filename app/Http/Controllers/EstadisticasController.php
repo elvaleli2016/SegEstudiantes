@@ -72,7 +72,7 @@ class EstadisticasController extends Controller
     }
     else if($tipo=='pasantia'){
       if($tipo_bus=='convenio'){
-        $res=Pasantia::select('pasantias.titulo','est.identificacion as est_identificacion','est1.codigo as est_codigo','est.nombre as est_nombre','est.apellido as est_apellido','doc.nombre as tutor','convenios.concepto','pasantias.fecha_ini','pasantias.fecha_fin','emp.nombre as empresa')
+        $res=Pasantia::select('pasantias.titulo','est.identificacion as est_identificacion','est1.codigo as est_codigo','est.nombre as est_nombre','est.apellido as est_apellido','doc.nombre as dir_nombre','doc.apellido as dir_apellido','convenios.concepto','pasantias.fecha_ini','pasantias.fecha_fin','emp.nombre as empresa')
         ->join('docentes as doc1','doc1.id','=','pasantias.tutor')->join('usuarios as doc','doc.id','=','doc1.id')
         ->join('estudiantes as est1','est1.id','=','pasantias.estudiante')->join('usuarios as est','est.id','=','est1.id')
         ->join('convenios','convenios.id','=','pasantias.convenio')
@@ -81,7 +81,7 @@ class EstadisticasController extends Controller
         ->distinct()->get();
       }
       if($tipo_bus=='empresa'){
-        $res=Pasantia::select('pasantias.titulo','est.identificacion as est_identificacion','est1.codigo as est_codigo','est.nombre as est_nombre','est.apellido as est_apellido','doc.nombre as tutor','convenios.concepto','pasantias.fecha_ini','pasantias.fecha_fin','emp.nombre as empresa')
+        $res=Pasantia::select('pasantias.titulo','est.identificacion as est_identificacion','est1.codigo as est_codigo','est.nombre as est_nombre','est.apellido as est_apellido','doc.nombre as dir_nombre','doc.apellido as dir_apellido','convenios.concepto','pasantias.fecha_ini','pasantias.fecha_fin','emp.nombre as empresa')
         ->join('docentes as doc1','doc1.id','=','pasantias.tutor')->join('usuarios as doc','doc.id','=','doc1.id')
         ->join('estudiantes as est1','est1.id','=','pasantias.estudiante')->join('usuarios as est','est.id','=','est1.id')
         ->join('convenios','convenios.id','=','pasantias.convenio')

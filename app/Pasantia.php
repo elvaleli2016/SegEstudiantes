@@ -18,5 +18,5 @@ class Pasantia extends Model
      *
      * @var array
      */
-    protected $fillable = ['id','titulo','descripcion','estudiante','tutor','convenio','fecha_ini','fecha_fin'];
+    protected $fillable = ['id','titulo','descripcion','estudiante','tutor','convenio','fecha_ini','fecha_fin','tutor_emp'];
 }

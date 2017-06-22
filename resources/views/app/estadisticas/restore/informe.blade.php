@@ -223,27 +223,39 @@
                             <table  class="table table-bordered table-striped" role="grid" aria-describedby="example1_info">
                                 <thead>
                                 <tr role="row">
-                                    <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending"
-                                        aria-label="Rendering engine: activate to sort column descending" style="width: 105px;">Titulo</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                         aria-label="Browser: activate to sort column ascending" style="width: 150px;">Nombre estudiante</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                         aria-label="Browser: activate to sort column ascending" style="width: 150px;">Código del estudiante</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                                        aria-label="Browser: activate to sort column ascending" style="width: 150px;">Número documento idnetificación</th>
+                                        aria-label="Browser: activate to sort column ascending" style="width: 150px;">Número documento identificación</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                         aria-label="Browser: activate to sort column ascending" style="width: 150px;">Programa academico</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
-                                        style="width: 131px;">Nombre tutor</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                                        aria-label="CSS grade: activate to sort column ascending" style="width: 100px;">Convenio</th>
+                                        aria-label="Browser: activate to sort column ascending" style="width: 150px;">Registro SNIES</th>                          
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                        aria-label="Browser: activate to sort column ascending" style="width: 150px;">Nivel de formación</th>                          
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                        aria-label="Browser: activate to sort column ascending" style="width: 150px;">Modalidad programa</th>                          
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                        aria-label="Browser: activate to sort column ascending" style="width: 150px;">Forma de participación</th>                          
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                        aria-label="Browser: activate to sort column ascending" style="width: 150px;">Codigo asignatura</th>                          
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
                                         style="width: 101px;">Empresa</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
                                         style="width: 101px;">Fecha inicio</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                         aria-label="CSS grade: activate to sort column ascending" style="width: 70px;">Fecha fin</th>
-
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                        aria-label="CSS grade: activate to sort column ascending" style="width: 70px;">Facultad</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                        aria-label="CSS grade: activate to sort column ascending" style="width: 100px;">Convenio</th>
+                                    <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending"
+                                        aria-label="Rendering engine: activate to sort column descending" style="width: 105px;">Titulo</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
+                                        style="width: 131px;">Director</th>    
+                                                        
                                 </tr>
                                 </thead>
                                 <tbody id="table_pasantia">

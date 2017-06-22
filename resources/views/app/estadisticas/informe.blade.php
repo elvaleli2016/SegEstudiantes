@@ -32,9 +32,10 @@
                         $('#table_pasantia').html('');
                         for(var i=0;i<res.length;i++){
                           dat=res[i];
-                          dato="<tr><th>"+dat.titulo+"</th><th>"+dat.est_nombre+' '+dat.est_apellido+"</th><th>"+dat.est_codigo+"</th><th>"+dat.est_identificacion
-                          +"</th><th>Ingenieria de Sistemas</th><th>"+dat.tutor+"</th><th>"+dat.concepto+"</th><th>"+dat.empresa+"</th><th>"+dat.fecha_ini+"</th><th>"+dat.fecha_fin
-                          +"</th></tr>";
+                          dato="<tr><th>"+dat.est_nombre+' '+dat.est_apellido+"</th><th>"+dat.est_codigo+"</th><th>"+dat.est_identificacion
+                          +"</th><th>Ingenieria de Sistemas</th><th> </th><th> Pregrado </th><th> Presencial </th><th> Pasantia </th><th> 115 </th><th>"+dat.empresa+"</th><th>"
+                          +dat.fecha_ini+"</th><th>"+dat.fecha_fin
+                          +"</th><th>Ingeniería</th><th>"+dat.concepto+"</th><th>"+dat.titulo+"</th><th>"+dat.dir_nombre+' '+dat.dir_apellido+"</th></tr>";
                           $('#table_pasantia').append(dato);
                         }
                         $('#pasantia').show();

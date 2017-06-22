@@ -52,7 +52,7 @@
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                         aria-label="Browser: activate to sort column ascending" style="width: 150px;">Nombre estudiante</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
-                                        style="width: 131px;">Nombre tutor</th>
+                                        style="width: 131px;">Director</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                         aria-label="CSS grade: activate to sort column ascending" style="width: 100px;">Convenio</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"

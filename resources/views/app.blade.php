@@ -144,6 +144,14 @@
       <li><a href="{{URL::asset('listar-estudiante')}}">Listar</a></li>
     </ul>
   </li>
+  <li class="dropdown">
+    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Tutor</a>
+    <ul class="dropdown-menu">
+      <li><a href="{{URL::asset('agregar-tutor')}}">Registrar </a></li>
+      <li><a href="{{URL::asset('listar-tutor')}}">Listar</a></li>
+    </ul>
+  </li>
+
   @if(session('usuario')['tipo']=='administrador')
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Empresas</a>
@@ -181,7 +189,7 @@
 
 
   <li class="nodropdown">
-    <a href="{{URL::asset('informe')}}" class="dropdown-toggle disabled" data-toggle="dropdown" >Información</a>
+    <a href="{{URL::asset('informe')}}" class="dropdown-toggle disabled" data-toggle="dropdown" >Informe</a>
   </li>
 
 
