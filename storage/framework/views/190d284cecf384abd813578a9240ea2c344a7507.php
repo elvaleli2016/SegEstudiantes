@@ -30,7 +30,7 @@
                   <div class="col-md-12">
                       <form role="form" id="form-empresa" action="agregar-empresa" method="POST" enctype="multipart/form-data">
                           <div class="box box-danger">
-                              <input name="_token" type="hidden" value="<?php echo e(csrf_token()); ?>">
+                              <input id="_token" name="_token" type="hidden" value="<?php echo e(csrf_token()); ?>">
                               <div class="box-body">
                                   <div class="row">
                                       <div class="col-md-4">

@@ -71,16 +71,70 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-xs-12" style="height:20px"></div>
-                              <div class="col-md-2">
-                                <div class="form-group">
-                                    <label for="empresa">Busqueda:</label>
+
+                            <div class="col-xs-12" style="padding:5px"></div>
+                            <div class="col-xs-12" style="padding:5px"></div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label >Activar fechas:</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                     <input type="text" class="form-control" id="busqueda" name="busqueda" placeholder="busqueda" required>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <input type="checkbox" class="form-control" id="tipo_fecha" name="tipo_fecha" value="1">
+                                    </div>
                                 </div>
+
+                             <div class="col-xs-12" style="padding:5px"></div>   
+                            <div class="classFechas">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Fecha inicio</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">           
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input required type="text" class="form-control pull-right" name="fecha_ini" id="fecha_ini"
+                                                value="">
+                                        </div>
+                                        <!-- /.input group -->
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Fecha fin</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">        
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input required type="text" class="form-control pull-right" name="fecha_fin" id="fecha_fin"
+                                                 value="">
+                                        </div>
+                                            <!-- /.input group -->
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12" style="padding:5px"></div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label >Busqueda:</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="busqueda" name="busqueda" placeholder="busqueda" required>
+                                    </div>
+                                </div>
+                                
                             </div>
                             <div class="col-xs-12" style="height:20px"></div>
                             <div class="col-xs-6">
@@ -220,40 +274,40 @@
 
                     <div class="row">
                         <div class="col-sm-12">
-                            <table  class="table table-bordered table-striped" role="grid" aria-describedby="example1_info">
+                            <table id="example3" class="table table-bordered table-striped display" role="grid" aria-describedby="example3_info">
                                 <thead>
                                 <tr role="row">
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"
                                         aria-label="Browser: activate to sort column ascending" style="width: 150px;">Nombre estudiante</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"
                                         aria-label="Browser: activate to sort column ascending" style="width: 150px;">Código del estudiante</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"
                                         aria-label="Browser: activate to sort column ascending" style="width: 150px;">Número documento identificación</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"
                                         aria-label="Browser: activate to sort column ascending" style="width: 150px;">Programa academico</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"
                                         aria-label="Browser: activate to sort column ascending" style="width: 150px;">Registro SNIES</th>                          
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"
                                         aria-label="Browser: activate to sort column ascending" style="width: 150px;">Nivel de formación</th>                          
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"
                                         aria-label="Browser: activate to sort column ascending" style="width: 150px;">Modalidad programa</th>                          
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"
                                         aria-label="Browser: activate to sort column ascending" style="width: 150px;">Forma de participación</th>                          
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"
                                         aria-label="Browser: activate to sort column ascending" style="width: 150px;">Codigo asignatura</th>                          
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
+                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
                                         style="width: 101px;">Empresa</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
+                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
                                         style="width: 101px;">Fecha inicio</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"
                                         aria-label="CSS grade: activate to sort column ascending" style="width: 70px;">Fecha fin</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"
                                         aria-label="CSS grade: activate to sort column ascending" style="width: 70px;">Facultad</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"
                                         aria-label="CSS grade: activate to sort column ascending" style="width: 100px;">Convenio</th>
-                                    <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending"
+                                    <th class="sorting_asc" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-sort="ascending"
                                         aria-label="Rendering engine: activate to sort column descending" style="width: 105px;">Titulo</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
+                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
                                         style="width: 131px;">Director</th>    
                                                         
                                 </tr>

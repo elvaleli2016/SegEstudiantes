@@ -1,6 +1,6 @@
 @extends('app')
 @section('style')
-
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('plugins/datepicker/datepicker3.css')}}">
 @endsection
 
 @section('content')

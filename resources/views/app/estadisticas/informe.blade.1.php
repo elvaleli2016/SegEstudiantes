@@ -1,6 +1,6 @@
 @extends('app')
 @section('style')
-
+  
 @endsection
 
 @section('content')
