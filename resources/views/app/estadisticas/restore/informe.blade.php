@@ -187,7 +187,6 @@
 
                     <div class="row">
                         <div class="col-sm-12">
-<<<<<<< HEAD
                             <table id="example0" cellspacing="0" width="100%" class="table table-bordered table-striped display nowrap" role="grid" aria-describedby="example0_info">
                                 <thead>
                                 <tr role="row">
@@ -205,23 +204,6 @@
                                         aria-label="CSS grade: activate to sort column ascending" style="width: 100px;">Telefono</th>
                                     <th class="sorting" tabindex="0" aria-controls="example0" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
                                         style="width: 101px;">Correo</th>
-=======
-                            <table  class="table table-bordered table-striped" role="grid" aria-describedby="example1_info">
-                                <thead>
-                                <tr role="row">
-                                    <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending"
-                                        aria-label="Rendering engine: activate to sort column descending" style="width: 105px;">Nombre</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                                        aria-label="Browser: activate to sort column ascending" style="width: 150px;">NIT</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
-                                        style="width: 131px;">Representante</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                                        aria-label="CSS grade: activate to sort column ascending" style="width: 100px;">Ciudad</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
-                                        style="width: 101px;">Dirección</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                                        aria-label="CSS grade: activate to sort column ascending" style="width: 70px;"></th>
->>>>>>> 13aaa0c36e90a4dcc8714b137453c01e03ebc8ed
 
                                 </tr>
                                 </thead>
@@ -253,11 +235,7 @@
 
                     <div class="row">
                         <div class="col-sm-12">
-<<<<<<< HEAD
                             <table id="example2" cellspacing="0" width="100%" class="table table-bordered table-striped display nowrap" role="grid" aria-describedby="example2_info">
-=======
-                            <table id="example2" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
->>>>>>> 13aaa0c36e90a4dcc8714b137453c01e03ebc8ed
                                 <thead>
                                 <tr role="row">
                                     <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending"
@@ -298,11 +276,7 @@
 
                     <div class="row">
                         <div class="col-sm-12">
-<<<<<<< HEAD
                             <table id="example3" cellspacing="0" width="100%" class="table table-bordered table-striped display nowrap" role="grid" aria-describedby="example3_info">
-=======
-                            <table id="example3" class="table table-bordered table-striped display" role="grid" aria-describedby="example3_info">
->>>>>>> 13aaa0c36e90a4dcc8714b137453c01e03ebc8ed
                                 <thead>
                                 <tr role="row">
                                     <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"
@@ -337,11 +311,8 @@
                                         aria-label="Rendering engine: activate to sort column descending" style="width: 105px;">Titulo</th>
                                     <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
                                         style="width: 131px;">Director</th>    
-<<<<<<< HEAD
                                     <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
                                         style="width: 131px;">Tutor Empresa</th>    
-=======
->>>>>>> 13aaa0c36e90a4dcc8714b137453c01e03ebc8ed
                                                         
                                 </tr>
                                 </thead>
@@ -374,11 +345,7 @@
 
                     <div class="row">
                         <div class="col-sm-12">
-<<<<<<< HEAD
                             <table id="example1" cellspacing="0" width="100%" class="table table-bordered table-striped display nowrap" role="grid" aria-describedby="example1_info">
-=======
-                            <table  class="table table-bordered table-striped" role="grid" aria-describedby="example1_info">
->>>>>>> 13aaa0c36e90a4dcc8714b137453c01e03ebc8ed
                                 <thead>
                                 <tr role="row">
                                     <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending"
@@ -414,7 +381,6 @@
     </section>
 
 </div>
-<<<<<<< HEAD
 <div id="convenio">
 
 
@@ -470,8 +436,6 @@
     </section>
 
 </div>
-=======
->>>>>>> 13aaa0c36e90a4dcc8714b137453c01e03ebc8ed
 
 
 </div>
@@ -479,11 +443,8 @@
 </div>
 </div>
 </div>
-<<<<<<< HEAD
 
 
 
 
 
-=======
->>>>>>> 13aaa0c36e90a4dcc8714b137453c01e03ebc8ed

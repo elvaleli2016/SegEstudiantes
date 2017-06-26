@@ -12,7 +12,6 @@
 @endsection
 
 @section('script')
-<<<<<<< HEAD
 
 
     <script src="//cdn.datatables.net/buttons/1.0.3/js/dataTables.buttons.min.js"></script>
@@ -33,12 +32,6 @@
             $("#example4").DataTable( {
 
             } );
-=======
-    <script>
-        $(document).ready(function () {
-
-            $("#example3").DataTable();
->>>>>>> 13aaa0c36e90a4dcc8714b137453c01e03ebc8ed
             
             var currentDate = new Date();
 
@@ -76,30 +69,23 @@
                   url: "{{URL::asset('informe')}}",
                   data: { "tipo_busqueda": tipoB, "tipo": tipo, "buscar": buscar,"fecha_ini":fecha_ini,"fecha_fin":fecha_fin,"tipo_fecha":tipo_fecha, "_token": token },
                   success: function (res) {
-<<<<<<< HEAD
 
                   
 
 
 
-=======
->>>>>>> 13aaa0c36e90a4dcc8714b137453c01e03ebc8ed
                     var dato="";
 
                     if(res!=null&&res[0]!=null){
                       res=res[0]
                       if(tipo=="pasantia"){       //PASANTIA
-<<<<<<< HEAD
                         $('#example3').dataTable().fnDestroy();
-=======
->>>>>>> 13aaa0c36e90a4dcc8714b137453c01e03ebc8ed
                         $('#table_pasantia').html('');
                         for(var i=0;i<res.length;i++){
                           dat=res[i];
                           dato="<tr><th>"+dat.est_nombre+' '+dat.est_apellido+"</th><th>"+dat.est_codigo+"</th><th>"+dat.est_identificacion
                           +"</th><th>Ingenieria de Sistemas</th>856<th> </th><th> Pregrado </th><th> Presencial </th><th> Pasantia </th><th> 115 </th><th>"+dat.empresa+"</th><th>"
                           +dat.fecha_ini+"</th><th>"+dat.fecha_fin
-<<<<<<< HEAD
                           +"</th><th>Ingeniería</th><th>"+dat.concepto+"</th><th>"+dat.titulo+"</th><th>"+dat.dir_nombre+' '+dat.dir_apellido+"</th><th>"+dat.tut_nombre+' '+dat.tut_apellido+"</th></tr>";
                           $('#table_pasantia').append(dato);
                         }
@@ -113,13 +99,6 @@
                         } );
                       }else if(tipo=="practica"){       //PRACTICA
                         $('#example1').dataTable().fnDestroy();
-=======
-                          +"</th><th>Ingeniería</th><th>"+dat.concepto+"</th><th>"+dat.titulo+"</th><th>"+dat.dir_nombre+' '+dat.dir_apellido+"</th></tr>";
-                          $('#table_pasantia').append(dato);
-                        }
-                        $('#pasantia').show();
-                      }else if(tipo=="practica"){       //PRACTICA
->>>>>>> 13aaa0c36e90a4dcc8714b137453c01e03ebc8ed
                         $('#table_practica').html('');
                         for(var i=0;i<res.length;i++){
                           dat=res[i];
@@ -127,7 +106,6 @@
                           $('#table_practica').append(dato);
                         }
                         $('#practica').show();
-<<<<<<< HEAD
                         $("#example1").DataTable( {
                             dom: 'Bfrtip',
                             buttons: [
@@ -172,18 +150,6 @@
 
 
 
-=======
-                      }else if(tipo=="empresa"){  //EMPRESA
-                        $('#table_empresa').html('');
-                        for(var i=0;i<res.length;i++){
-                          dato="<tr><th>"+res[i].nombre+"</th><th>"+res[i]['nit']+"</th><th>"+res[i].representante+"</th><th>"+res[i].ciudad+"</th><th>"+res[i].direccion+"</th><th></th></tr>";
-                          $('#table_empresa').append(dato);
-                        }
-                        $('#empresa').show();
-                      }
-                      
-                    }
->>>>>>> 13aaa0c36e90a4dcc8714b137453c01e03ebc8ed
                   },
                   error: function (err) {
                   }
@@ -200,10 +166,7 @@
           $('#persona').hide();
           $('#pasantia').hide();
           $('#practica').hide();
-<<<<<<< HEAD
           $('#convenio').hide();
-=======
->>>>>>> 13aaa0c36e90a4dcc8714b137453c01e03ebc8ed
         }
     </script>
 @endsection
