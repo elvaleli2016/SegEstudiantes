@@ -52,10 +52,7 @@
     <link type="text/css" rel="stylesheet" href="{{URL::asset('plugins/datatables/dataTables.bootstrap.css')}}">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="{{URL::asset('plugins/bootstrap-select/bootstrap-select.min.css')}}">
-<<<<<<< HEAD
     <script type="text/javascript" src="{{URL::asset('js/jquery.min.js')}}"></script>
-=======
->>>>>>> 13aaa0c36e90a4dcc8714b137453c01e03ebc8ed
 
     @yield("style")
   </head>
@@ -275,10 +272,6 @@
       <a href="http://www.mineducacion.gov.co/sistemasdeinformacion/1735/w3-propertyname-2895.html" target="_blank"><img src="{{URL::asset('rsc/img/SPADIES.png')}}" class="hover-shadow" alt=""></a>
     </div>
   </div>
-<<<<<<< HEAD
-=======
-  <script type="text/javascript" src="{{URL::asset('js/jquery.min.js')}}"></script>
->>>>>>> 13aaa0c36e90a4dcc8714b137453c01e03ebc8ed
   <script type="text/javascript" src="{{URL::asset('js/jquery-migrate.min.js')}}"></script>
   <script type="text/javascript" src="{{URL::asset('js/bootstrap.min.js')}}"></script>
   <script type="text/javascript" src="{{URL::asset('js/pgwslider.min.js')}}"></script>
