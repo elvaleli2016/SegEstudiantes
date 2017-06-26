@@ -1,5 +1,5 @@
 <?php $__env->startSection('style'); ?>
-
+    <link type="text/css" rel="stylesheet" href="<?php echo e(URL::asset('plugins/datepicker/datepicker3.css')); ?>">
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>

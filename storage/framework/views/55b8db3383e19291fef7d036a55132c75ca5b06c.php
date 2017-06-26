@@ -73,8 +73,8 @@
                                         <td><?php echo e($dato->representante); ?></td>
                                         <td><?php echo e($dato->ciudad); ?></td>
                                         <td><?php echo e($dato->direccion); ?></td>
-                                        <td><a style="color:#FFF" title="Editar" href="/editar-empresa/<?php echo e($dato->id); ?>" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
-                                        <a style="color:#FFF" title="Eliminar" href="/eliminar-empresa/<?php echo e($dato->id); ?>" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" ><i class="fa fa-times-circle"></i></a>
+                                        <td><a style="color:#FFF" title="Editar" href="./editar-empresa/<?php echo e($dato->id); ?>" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
+                                        <a style="color:#FFF" title="Eliminar" href="./eliminar-empresa/<?php echo e($dato->id); ?>" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" ><i class="fa fa-times-circle"></i></a>
                                      </a>
                                     </tr>
 

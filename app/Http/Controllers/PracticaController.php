@@ -11,6 +11,7 @@ use App\Usuario;
 use App\Estudiante;
 use App\Convenios;
 use App\Empresa;
+use App\Tutor;
 
 class PracticaController extends Controller
 {
@@ -44,7 +45,8 @@ class PracticaController extends Controller
     $empresas=Empresa::all();
     $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();
     $docentes=DB::table('usuarios')->join('docentes','usuarios.id','=','docentes.id')->get();
-    return view($this->direccion.'agregar',compact('estudiantes','docentes','empresas'));
+    $tutores=DB::table('usuarios')->join('tutors','usuarios.id','=','tutors.id')->get();
+    return view($this->direccion.'agregar',compact('estudiantes','docentes','empresas','tutores'));
   }
 
   public function postAgregar(Request $request){
@@ -55,6 +57,7 @@ class PracticaController extends Controller
                 'descripcion' => $request->descripcion,
                 'estudiante' => $estudiante,
                 'tutor' => $request->tutor,
+                'tutor_emp' => $request->tutor_emp,
                 'convenio' => $request->convenio,
                 'ano' => $request->ano,
                 'semestre' => $request->semestre)
@@ -66,7 +69,8 @@ class PracticaController extends Controller
     $empresas=Empresa::all();
     $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();
     $docentes=DB::table('usuarios')->join('docentes','usuarios.id','=','docentes.id')->get();
-    return view($this->direccion.'agregar',["msj"=>"Se registro correctamente la pasantia ".$request['titulo']],compact('estudiantes','docentes','empresas'));
+    $tutores=DB::table('usuarios')->join('tutors','usuarios.id','=','tutors.id')->get();
+    return view($this->direccion.'agregar',["msj"=>"Se registro correctamente la pasantia ".$request['titulo']],compact('estudiantes','docentes','empresas','tutores'));
 }
 
   public function getEditar($id){
@@ -78,7 +82,8 @@ class PracticaController extends Controller
     $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();
     $docentes=DB::table('usuarios')->join('docentes','usuarios.id','=','docentes.id')->get();
     $periodos=Periodo::where('practica','=',$id)->get();
-    return view($this->direccion.'editar',compact('estudiantes','docentes','empresas','practica','convenios','practica'));
+    $tutores=DB::table('usuarios')->join('tutors','usuarios.id','=','tutors.id')->get();
+    return view($this->direccion.'editar',compact('estudiantes','docentes','empresas','practica','convenios','practica','periodos','tutores'));
   }
 
   public function postEditar(Request $request){
@@ -88,6 +93,7 @@ class PracticaController extends Controller
     $practica->convenio=$request->convenio;
     $practica->estudiante=$request->estudiante;
     $practica->tutor=$request->tutor;
+    $practica->tutor_emp=$request->tutor_emp;
     $practica->ano=$request->ano;
     $practica->semestre=$request->semestre;
     $practica->update();

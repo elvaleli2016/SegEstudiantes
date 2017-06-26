@@ -22,7 +22,6 @@ Route::get("/inicio",'SesionController@getValidar');
 Route::post("/inicio",'SesionController@validar');
 Route::get("/salir","SesionController@salir");
 
-
 /* Convenios */
 Route::get('/agregar-convenio', ['as' => 'app.convenio.agregar', 'uses' => 'ConvenioController@getAgregar']);
 Route::post('/agregar-convenio', ['as' => 'app.convenio.agregar', 'uses' => 'ConvenioController@postAgregar']);
@@ -71,6 +70,17 @@ Route::post('/eliminar-estudiante', ['as' => 'app.estudiante.eliminar', 'uses' =
 
 Route::get('/listar-estudiante', ['as' => 'app.estudiante.listar', 'uses' => 'EstudianteController@index']);
 
+/* Tutors */
+Route::get('/agregar-tutor', ['as' => 'app.tutor.agregar', 'uses' => 'TutorController@getAgregar']);
+Route::post('/agregar-tutor', ['as' => 'app.tutor.agregar', 'uses' => 'TutorController@postAgregar']);
+
+Route::get('/editar-tutor/{id}', ['as' => 'app.tutor.editar', 'uses' => 'TutorController@getEditar']);
+Route::post('/editar-tutor', ['as' => 'app.tutor.editar', 'uses' => 'TutorController@postEditar']);
+
+Route::post('/eliminar-tutor', ['as' => 'app.tutor.eliminar', 'uses' => 'TutorController@postEliminar']);
+
+Route::get('/listar-tutor', ['as' => 'app.tutor.listar', 'uses' => 'TutorController@index']);
+
 /* Pasantias */
 Route::get('/agregar-pasantia', ['as' => 'app.pasantia.agregar', 'uses' => 'PasantiaController@getAgregar']);
 Route::post('/agregar-pasantia', ['as' => 'app.pasantia.agregar', 'uses' => 'PasantiaController@postAgregar']);
@@ -101,3 +111,6 @@ Route::get('/eliminar-practica/{id}', ['as' => 'app.practica.eliminar', 'uses' =
 
 
 Route::get('/estadisticas', ['as' => 'app.estadisticas.index', 'uses' => 'EstadisticasController@index']);
+Route::get('/informe', ['as' => 'app.informe.index', 'uses' => 'EstadisticasController@getInforme']);
+
+Route::post('/informe','EstadisticasController@postInforme');

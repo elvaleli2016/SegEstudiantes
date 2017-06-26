@@ -52,7 +52,7 @@
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                         aria-label="Browser: activate to sort column ascending" style="width: 150px;">Nombre estudiante</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
-                                        style="width: 131px;">Nombre tutor</th>
+                                        style="width: 131px;">Director</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                         aria-label="CSS grade: activate to sort column ascending" style="width: 100px;">Convenio</th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
@@ -76,9 +76,12 @@
                                         <td><?php echo e($dato['concepto']); ?></td>
                                         <td><?php echo e($dato['ano']); ?></td>
                                         <td><?php echo e($dato['semestre']); ?></td>
-                                        <td><a href="/editar-practica/<?php echo e($dato->id); ?>" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
-                                        <a href="/eliminar-practica/<?php echo e($dato->id); ?>" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" ><i class="fa fa-times-circle"></i></a>
-                                     </a>
+                                        <td>
+                                          <a style="color:#FFF" href="./editar-practica/<?php echo e($dato->id); ?>" class="btn btn-primary  btn-sm" data-original-title="Editar" data-toggle="tooltip" ><i class="fa fa-edit"></i></a>
+                                        <a style="color:#FFF" href="./entrega-pasantia/<?php echo e($dato->id); ?>" class="btn btn-success  btn-sm" data-original-title="Entrega" data-toggle="tooltip" ><i class="fa fa-plus"></i></a>
+                                        <?php if(session('usuario')['tipo']!="docente"): ?>
+                                        <a style="color:#FFF" href="./eliminar-practica/<?php echo e($dato->id); ?>" data-original-title="Eliminar" data-toggle="tooltip" class="btn btn-danger btn-sm" onclick="return confirm('Seguro desea eliminar la practica')" ><i class="fa fa-times-circle"></i></a>
+                                        <?php endif; ?>
                                     </tr>
 
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

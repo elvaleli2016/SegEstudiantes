@@ -86,6 +86,17 @@
                                       </div>
                                       <div class="col-md-6">
                                           <div class="form-group">
+                                              <label>Tutor Empresa</label>
+                                              <select requerid class=" selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="tutor_emp" data-live-search="true">
+                                                  <option selected></option>
+                                                  @foreach ($tutores as $dato)
+                                                      <option data-tokens="{{$dato->id}}" value="{{$dato->id}}">{{$dato->nombre}} {{$dato->apellido}}</option>
+                                                  @endforeach
+                                              </select>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group">
                                               <label>Fecha inicio</label>
 
                                               <div class="input-group date">

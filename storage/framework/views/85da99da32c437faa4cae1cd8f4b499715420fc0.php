@@ -7,6 +7,8 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('script'); ?>
+<script type="text/javascript" src="https://select2.github.io/dist/js/select2.full.js"></script>
+<link href="https://select2.github.io/dist/css/select2.min.css" type="text/css" rel="stylesheet" />
 <script>
 $('#empresa').change(function(){
   var datos="id="+$('#empresa').val();
@@ -32,6 +34,9 @@ $('#empresa').change(function(){
   });
 });
 
+</script>
+<script type="text/javascript">
+$(".js-example-basic-multiple").select2();
 </script>
 <?php $__env->stopSection(); ?>
 

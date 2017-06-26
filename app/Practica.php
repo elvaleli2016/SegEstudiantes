@@ -18,5 +18,5 @@ class Practica extends Model
      *
      * @var array
      */
-    protected $fillable = ['id','titulo','descripcion','estudiante','tutor','convenio','ano','semestre'];
+    protected $fillable = ['id','titulo','descripcion','estudiante','tutor','convenio','ano','semestre','tutor_emp'];
 }

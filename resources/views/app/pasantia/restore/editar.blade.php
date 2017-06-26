@@ -31,7 +31,7 @@
               </section>
               <section style="padding : 10px 25px 25px 25px;">
                   <div class="col-md-12">
-                      <form role="form" id="form-pasantia" action="/editar-pasantia" method="POST" enctype="multipart/form-data">
+                      <form role="form" id="form-pasantia" action="../editar-pasantia" method="POST" enctype="multipart/form-data">
                           <div class="box box-danger">
                             <input name="id" type="hidden"  value="{{$pasantia->id}}">
                               <input name="_token" type="hidden" id="token" value="{{ csrf_token() }}">
@@ -65,7 +65,7 @@
                                               <label>Convenio</label>
                                               <select requerid class=" selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="convenio" id="convenio" data-live-search="true">
                                                 @foreach ($convenios as $dato)
-                                                    <option data-tokens="{{$dato->id}}" value="{{$dato->id}}" @if($dato->id==$pasantia->convenio) selected @endif >{{$dato->n_convenio}} {{$dato->concepto}}</option>
+                                                    <option data-tokens="{{$dato->id}}" value="{{$dato->id}}" @if($dato->id==$pasantia->convenio) selected @endif >{{$dato->n_convenio}} - {{$dato->concepto}}</option>
                                                 @endforeach
                                               </select>
                                           </div>
@@ -88,6 +88,17 @@
                                                   <option selected></option>
                                                   @foreach ($docentes as $dato)
                                                       <option data-tokens="{{$dato->id}}" value="{{$dato->id}}" @if($dato->id==$pasantia->tutor) selected @endif>{{$dato->nombre}} {{$dato->apellido}}</option>
+                                                  @endforeach
+                                              </select>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label>Tutor</label>
+                                              <select requerid class=" selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="tutor_emp" data-live-search="true">
+                                                  <option selected></option>
+                                                  @foreach ($tutores as $dato)
+                                                      <option data-tokens="{{$dato->id}}" value="{{$dato->id}}" @if($dato->id==$pasantia->tutor_emp) selected @endif>{{$dato->nombre}} {{$dato->apellido}}</option>
                                                   @endforeach
                                               </select>
                                           </div>

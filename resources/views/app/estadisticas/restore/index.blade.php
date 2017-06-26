@@ -23,7 +23,7 @@
             <div class="icon">
               <i class="fa fa-user-secret"></i>
             </div>
-            <a href="/listar-docente" class="small-box-footer">Ver lista <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="./listar-docente" class="small-box-footer">Ver lista <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -38,7 +38,7 @@
             <div class="icon">
               <i class="fa fa-user"></i>
             </div>
-            <a href="/listar-estudiante" class="small-box-footer">Ver lista <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="./listar-estudiante" class="small-box-footer">Ver lista <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -53,7 +53,7 @@
             <div class="icon">
               <i class="fa fa-suitcase"></i>
             </div>
-            <a href="/listar-empresa" class="small-box-footer">Ver lista <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="./listar-empresa" class="small-box-footer">Ver lista <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -68,7 +68,7 @@
             <div class="icon">
               <i class="fa fa-retweet"></i>
             </div>
-            <a href="/listar-convenio" class="small-box-footer">Ver lista <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="./listar-convenio" class="small-box-footer">Ver lista <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -84,7 +84,7 @@
             <div class="icon">
               <i class="fa fa-gear"></i>
             </div>
-            <a href="/listar-pasantia" class="small-box-footer">Ver lista <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="./listar-pasantia" class="small-box-footer">Ver lista <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -99,7 +99,7 @@
             <div class="icon">
               <i class="fa fa-gears"></i>
             </div>
-            <a href="/listar-practicas" class="small-box-footer">Ver lista <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="./listar-practicas" class="small-box-footer">Ver lista <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -113,7 +113,7 @@
               <h3 class="box-title">Ultimos dos Periodos de Practicas</h3>
 
               <div class="box-tools pull-right">
-                
+
               </div>
             </div>
             <div class="box-body">

@@ -43,7 +43,8 @@ class PasantiaController extends Controller
     $empresas=Empresa::all();
     $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();
     $docentes=DB::table('usuarios')->join('docentes','usuarios.id','=','docentes.id')->get();
-    return view($this->direccion.'agregar',compact('estudiantes','docentes','empresas'));
+    $tutores=DB::table('usuarios')->join('tutors','usuarios.id','=','tutors.id')->get();
+    return view($this->direccion.'agregar',compact('estudiantes','docentes','empresas','tutores'));
   }
 
 
@@ -62,6 +63,7 @@ class PasantiaController extends Controller
                 'estudiante' => $estudiante,
                 'convenio' => $request->convenio,
                 'tutor' => $request->tutor,
+                'tutor_emp' => $request->tutor_emp,
                 'fecha_ini' => $request->fecha_ini,
                 'fecha_fin' => $request->fecha_fin)
           );
@@ -70,7 +72,8 @@ class PasantiaController extends Controller
     $empresas=Empresa::all();
     $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();
     $docentes=DB::table('usuarios')->join('docentes','usuarios.id','=','docentes.id')->get();
-    return view($this->direccion.'agregar',["msj"=>"Se registro correctamente la pasantia ".$request['titulo']],compact('estudiantes','docentes','empresas'));
+    $tutores=DB::table('usuarios')->join('tutors','usuarios.id','=','tutors.id')->get();
+    return view($this->direccion.'agregar',["msj"=>"Se registro correctamente la pasantia ".$request['titulo']],compact('estudiantes','docentes','empresas','tutores'));
   }
 
   public function getEditar($id){
@@ -82,7 +85,9 @@ class PasantiaController extends Controller
     $estudiantes=DB::table('usuarios')->join('estudiantes','usuarios.id','=','estudiantes.id')->get();
     $docentes=DB::table('usuarios')->join('docentes','usuarios.id','=','docentes.id')->get();
     $periodos=Periodo::where('pasantia','=',$id)->get();
-    return view($this->direccion.'editar',compact('estudiantes','docentes','empresas','pasantia','convenios','periodos'));
+    $tutores=DB::table('usuarios')->join('tutors','usuarios.id','=','tutors.id')->get();
+    //dd($pasantia);
+    return view($this->direccion.'editar',compact('estudiantes','docentes','empresas','pasantia','convenios','periodos','tutores'));
   }
 
   public function postEditar(Request $request){
@@ -92,6 +97,7 @@ class PasantiaController extends Controller
     $pasantia->convenio=$request->convenio;
     $pasantia->estudiante=$request->estudiante;
     $pasantia->tutor=$request->tutor;
+    $pasantia->tutor_emp=$request->tutor_emp;
     $pasantia->fecha_ini=$request->fecha_ini;
     $pasantia->fecha_fin=$request->fecha_fin;
     $pasantia->update();
