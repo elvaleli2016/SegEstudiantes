@@ -109,12 +109,13 @@
                         $('#table_practica').html('');
                         for(var i=0;i<res.length;i++){
                           dat=res[i];
-                          console.log(dat);
                           dato="<tr><th>"+dat.est_nombre+' '+dat.est_apellido+"</th><th>"+dat.est_codigo+"</th><th>"+dat.est_identificacion
                           +"</th><th>Ingenieria de Sistemas</th>856<th> </th><th> Pregrado </th><th> Presencial </th><th> Practica </th><th> 115 </th><th>"+dat.empresa+"</th><th>"
                           +dat.ano+"</th><th>"+dat.semestre
                           +"</th><th>Ingeniería</th><th>"+dat.concepto+"</th><th>"+dat.titulo+"</th><th>"+dat.dir_nombre+' '+dat.dir_apellido+"</th><th>"+dat.tut_nombre+' '+dat.tut_apellido+"</th></tr>";
                           $('#table_practica').append(dato);
+
+                          console.log(dato);
                         }
                         $('#practica').show();
                         $("#example1").DataTable( {

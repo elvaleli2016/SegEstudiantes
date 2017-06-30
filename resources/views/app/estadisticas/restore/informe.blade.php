@@ -416,7 +416,7 @@
                                                         
                                 </tr>
                                 </thead>
-                                <tbody id="table_pasantia">
+                                <tbody id="table_practica">
                                 </tbody>
                                 <tfoot>
 
