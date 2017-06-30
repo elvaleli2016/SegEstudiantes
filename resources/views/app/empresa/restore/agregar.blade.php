@@ -35,7 +35,7 @@
                                       <div class="col-md-4">
                                           <div class="form-group">
                                               <label>NIT</label>
-                                              <input required type="number" class="form-control" name="nit" placeholder="Digita su NIT" value="">
+                                              <input required type="text" class="form-control" name="nit" placeholder="Digita su NIT" value="">
                                           </div>
                                       </div>
                                       <div class="col-md-4">

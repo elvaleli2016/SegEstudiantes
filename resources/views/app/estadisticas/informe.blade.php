@@ -1,10 +1,7 @@
 @extends('app')
 @section('style')
     <link type="text/css" rel="stylesheet" href="{{URL::asset('plugins/datepicker/datepicker3.css')}}">
-<<<<<<< HEAD
     <link type="text/css" rel="stylesheet" href="{{URL::asset('plugins/datatables/buttons.dataTables.min.css')}}">
-=======
->>>>>>> 13aaa0c36e90a4dcc8714b137453c01e03ebc8ed
 @endsection
 
 @section('content')
@@ -102,7 +99,10 @@
                         $('#table_practica').html('');
                         for(var i=0;i<res.length;i++){
                           dat=res[i];
-                          dato="<tr><th>"+dat.titulo+"</th><th>"+dat.est_nombre+' '+dat.est_apellido+"</th><th>"+dat.tutor+"</th><th>"+dat.concepto+"</th><th>"+dat.empresa+"</th><th>"+dat.ano+"</th><th>"+dat.semestre+"</th></tr>";
+                          dato="<tr><th>"+dat.est_nombre+' '+dat.est_apellido+"</th><th>"+dat.est_codigo+"</th><th>"+dat.est_identificacion
+                          +"</th><th>Ingenieria de Sistemas</th>856<th> </th><th> Pregrado </th><th> Presencial </th><th> Practica </th><th> 115 </th><th>"+dat.empresa+"</th><th>"
+                          +dat.ano+"</th><th>"+dat.semestre
+                          +"</th><th>Ingeniería</th><th>"+dat.concepto+"</th><th>"+dat.titulo+"</th><th>"+dat.dir_nombre+' '+dat.dir_apellido+"</th><th>"+dat.tut_nombre+' '+dat.tut_apellido+"</th></tr>";
                           $('#table_practica').append(dato);
                         }
                         $('#practica').show();
