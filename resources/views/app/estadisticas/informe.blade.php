@@ -16,6 +16,8 @@
  
     <script>
         $(document).ready(function () {
+            
+            $('#idSemestre').hide();
 
             $("#example1").DataTable( {
 
@@ -31,6 +33,16 @@
             } );
             
             var currentDate = new Date();
+
+            $('#tipo').change(function(){
+                if($('#tipo').val()=="practica"){
+                    $('#idSemestre').show();
+                    $('#idFechas').hide();
+                }else{
+                    $('#idSemestre').hide(); 
+                    $('#idFechas').show();       
+                } 
+            });
 
             $("#fecha_ini").datepicker({
                 format: 'yyyy-mm-dd',
@@ -57,6 +69,8 @@
               var fecha_ini=$('#fecha_ini').val();
               var fecha_fin=$('#fecha_fin').val();
               var tipo=$('#tipo').val();
+              var ano=$('#ano').val();
+              var semestre=$('#semestre').val();
               var tipo_fecha=0;
               if( $('#tipo_fecha').attr('checked') )
                 tipo_fecha=1 ;
@@ -64,12 +78,8 @@
               $.ajax({
                   type: "POST",
                   url: "{{URL::asset('informe')}}",
-                  data: { "tipo_busqueda": tipoB, "tipo": tipo, "buscar": buscar,"fecha_ini":fecha_ini,"fecha_fin":fecha_fin,"tipo_fecha":tipo_fecha, "_token": token },
+                  data: { "ano":ano,"semestre":semestre,"tipo_busqueda": tipoB, "tipo": tipo, "buscar": buscar,"fecha_ini":fecha_ini,"fecha_fin":fecha_fin,"tipo_fecha":tipo_fecha, "_token": token },
                   success: function (res) {
-
-                  
-
-
 
                     var dato="";
 
@@ -99,6 +109,7 @@
                         $('#table_practica').html('');
                         for(var i=0;i<res.length;i++){
                           dat=res[i];
+                          console.log(dat);
                           dato="<tr><th>"+dat.est_nombre+' '+dat.est_apellido+"</th><th>"+dat.est_codigo+"</th><th>"+dat.est_identificacion
                           +"</th><th>Ingenieria de Sistemas</th>856<th> </th><th> Pregrado </th><th> Presencial </th><th> Practica </th><th> 115 </th><th>"+dat.empresa+"</th><th>"
                           +dat.ano+"</th><th>"+dat.semestre
@@ -146,9 +157,6 @@
                       }
                       
                     }
-
-
-
 
                   },
                   error: function (err) {

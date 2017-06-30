@@ -86,6 +86,17 @@
                                           </div>
                                       </div>
                                       <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label>Tutor Empresa</label>
+                                              <select requerid class=" selectpicker form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="tutor_emp" data-live-search="true">
+                                                  <option selected></option>
+                                                  <?php $__currentLoopData = $tutores; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $dato): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                      <option data-tokens="<?php echo e($dato->id); ?>" value="<?php echo e($dato->id); ?>"><?php echo e($dato->nombre); ?> <?php echo e($dato->apellido); ?></option>
+                                                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                              </select>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Año</label>
                                             <input required type="number" class="form-control" name="ano" placeholder="Digita el año" value=''>

@@ -86,7 +86,8 @@
                                 </div>
 
                              <div class="col-xs-12" style="padding:5px"></div>   
-                            <div class="classFechas">
+                            <div>
+                            <div id="idFechas">
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <label>Fecha inicio</label>
@@ -120,6 +121,35 @@
                                             <!-- /.input group -->
                                     </div>
                                 </div>
+                            </div>
+
+                            <div id="idSemestre">  
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Año:</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">           
+                                        <div class="input-group date">
+                                            <input required type="number" class="form-control pull-right" name="ano" id="ano" value="2017">
+                                        </div>
+                                        <!-- /.input group -->
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Semestre:</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">        
+                                        <div class="input-group date">
+                                            <input required type="number" class="form-control pull-right" name="semestre" id="semestre" value="1">
+                                        </div>
+                                            <!-- /.input group -->
+                                    </div>
+                                </div> 
+                            </div>
 
                                 <div class="col-xs-12" style="padding:5px"></div>
 
@@ -135,6 +165,8 @@
                                 </div>
                                 
                             </div>
+
+                            
                             <div class="col-xs-12" style="height:20px"></div>
                             <div class="col-xs-6">
                                 <div class="form-group">
